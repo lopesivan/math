@@ -1,0 +1,296 @@
+system "clear"
+print " "
+print " "
+print "============================================================"
+print "			Os direitos do autor e a GPL  "
+print "============================================================"
+print "  "
+print "Este programa é distribuido sob GPL. "
+print "Se você não souber o que é a GPL, envie um e-mail ao autor "
+print "                   tarcisio@member.ams.org "
+print "mas em suma  quer dizer que você pode usar livremente o sistema"
+print "de programas aqui mencionados, desde que esta informação seja mantida"
+print "em todas as alterações que você fizer dos programas e das cópias que "
+print "você deles fizer - é a proteção do direito autoral que não lhe impede"
+print "de usar livremente o conhecimento mas que mantém na memória  quem "
+print "participou de sua produção."
+print "Este programa foi escrito por Tarcisio Praciano-Pereira "
+print "professor da Universidade Estadual Vale do Acaraú - UeVA "
+print "Laboratório de Matemática Computacional - Curso de Matemática "
+print "Sobral - Ceará - Brasil " 
+print "Aperte enter para continuar!"
+pause -2
+system "clear"
+##   Esta folha foi automaticamente gerada por um programa em
+##   Python -  gnuplot.py   
+##  Copyleft de Tarcisio Praciano-Pereira
+##  tarcisio@e-math.ams.org  
+##  Uso livre, mas mantenha as mensagens, que caracterizam
+##  a autoria dos programas, (justo, não? ). 
+##  Não fazer isto, não duvide, é roubo.... 
+ ##  O uso e alterações são um direito indiscutível 
+##       do progresso da humanidade. 
+##  Me informe das melhorias feitas no programa .
+##       tarcisio@e-math.ams.org           
+ #######
+##  Modo de usar:  gnuplot gnuplot.taylor  -  veja abaixo
+##  Este arquivo chama outro:  gnuplot.taylor.data
+##  Os dois arquivos devem estar no mesmo diretório. 
+################ 
+set title 'Gráfico de (x+3)*(5-x)*sin(x/2.)  e suas polinômios de Taylor ' 
+f(x)=(x+3)*(5-x)*sin(x/2.) 
+diff(x) =(5-x)*sin(x/2.) - (x+3)*sin(x/2.) + 0.5*(x+3)*(5-x)*cos(x/2.) 
+diff2(x) = -sin(x/2.) + 0.5*(5-x)*cos(x/2.) - sin(x/2.) - 0.5*(x+3)*cos(x/2.)+ 0.5*(5-x)*cos(x/2.) -0.5*(x+3)*cos(x/2.)-\
++0.5*0.5*(x+3)*(5-x)*sin(x/2.)
+pol(x) = f(a) + diff(a)*(x-a)  + 0.5*diff2(a)*(x-a)*(x-a)
+a=-3 
+set pointsize 0.1
+set size 1,1 
+set xrange [-10:10]
+set yrange [-100.68704884:62.3300778531]
+set title 'Gráfico de (x+3)*(5-x)*sin(x/2.)  e suas polinômios de Taylor '  
+plot f(x),0,pol(x) 
+pause -2
+ 
+ 
+set title ' Pol de Taylor - 2o. grau  em (-10,-100.68704884)' 
+a = -10 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 0 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-9.5,-94.1833453609)' 
+a = -9.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 1 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-9.0,-82.1125298839)' 
+a = -9.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 2 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-8.5,-66.4529598485)' 
+a = -8.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 3 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-8.0,-49.192162195)' 
+a = -8.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 4 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-7.5,-32.1503241793)' 
+a = -7.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 5 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-7.0,-16.8375949291)' 
+a = -7.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 6 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-6.5,-4.35485416484)' 
+a = -6.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 7 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-6.0,4.65696026598)' 
+a = -6.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 8 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-5.5,10.0186010414)' 
+a = -5.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 9 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-5.0,11.9694428821)' 
+a = -5.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 10 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-4.5,11.0875430557)' 
+a = -4.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 11 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-4.0,8.18367684143)' 
+a = -4.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 12 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-3.5,4.18194027421)' 
+a = -3.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 13 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-3.0,-0.0)' 
+a = -3.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 14 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-2.5,-3.55869232258)' 
+a = -2.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 15 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-2.0,-5.89029689366)' 
+a = -2.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 16 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-1.5,-6.64597791023)' 
+a = -1.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 17 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-1.0,-5.75310646325)' 
+a = -1.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 18 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (-0.5,-3.40180443975)' 
+a = -0.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 19 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (0.0,0.0)' 
+a = 0.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 20 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (0.5,3.89661235826)' 
+a = 0.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 21 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (1.0,7.67080861767)' 
+a = 1.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 22 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (1.5,10.7358104704)' 
+a = 1.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 23 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (2.0,12.6220647721)' 
+a = 2.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 24 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (2.5,13.0485385161)' 
+a = 2.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 25 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (3.0,11.9699398392)' 
+a = 3.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 26 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (3.5,9.59386298202)' 
+a = 3.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 27 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (4.0,6.36508198778)' 
+a = 4.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 28 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (4.5,2.91777448833)' 
+a = 4.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 29 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (5.0,0.0)' 
+a = 5.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 30 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (5.5,-1.62205921622)' 
+a = 5.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 31 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (6.0,-1.27008007254)' 
+a = 6.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 32 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (6.5,1.54178066705)' 
+a = 6.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 33 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (7.0,7.01566455379)' 
+a = 7.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 34 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (7.5,15.003484617)' 
+a = 7.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 35 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (8.0,24.9744823452)' 
+a = 8.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 36 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (8.5,36.0233216687)' 
+a = 8.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 37 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (9.0,46.9214456479)' 
+a = 9.0 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 38 with lines 
+pause -2
+ 
+  
+ set title ' Pol de Taylor - 2o. grau  em (9.5,56.2102193799)' 
+a = 9.5 
+plot f(x),0,pol(x), 'gnuplot.taylor.data' index 39 with lines 
+pause -2
+ 
+  
+ 

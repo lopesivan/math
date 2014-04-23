@@ -1,0 +1,8 @@
+f:=(x) -> sin(x);
+
+T :=(n) -> diff(f(x),x$n)/n!;
+
+a[0] := f(a);
+a[1] := subs(x=a, T(1));
+a[2] := subs(x=a, T(2));
+a[3] := subs(x=a, T(3));

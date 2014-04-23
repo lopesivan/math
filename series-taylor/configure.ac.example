@@ -1,0 +1,56 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.68])
+AC_INIT([Exemplo], [1.0], [lopesivan.ufrj@gmail.com])
+AC_CONFIG_SRCDIR([src/ex.c])
+
+# Checks for programs.
+AC_PROG_CC
+
+AM_INIT_AUTOMAKE($PACKAGE_NAME,$PACKAGE_VERSION)
+
+# Checks for libraries.
+LT_INIT
+
+# Checks for libraries.
+Busca pela lib readline e apela função readline
+AC_CHECK_LIB(readline, readline)
+
+# Checks for header files.
+AC_CHECK_HEADERS([stdlib.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_CHECK_FUNCS([getcwd])
+
+AC_CONFIG_FILES([Makefile
+                 src/Makefile])
+AC_OUTPUT
+
+
+# There are a lot of different ways to do this. If the liblayout library
+# has an associated pkg-config file (/usr/lib/pkgconfig/layout.pc or
+# something), then you'd do something like this
+#
+# configure.ac:
+# PKG_CHECK_MODULES(LAYOUT, layout)
+#
+# Makefile.am:
+# AM_CFLAGS = $(LAYOUT_CFLAGS)
+# theprogram_LIBADD = $(LAYOUT_LIBS)
+#
+# If you don't have a pkg-config file, then it's a little different.
+#
+# configure.ac:
+# AC_CHECK_LIB(layout, some_function_in_liblayout)
+#
+# This will add -llayout to the LIBS variable if it's found, and then it
+# will be linked into all programs and libraries. The drawback is that
+# this doesn't handle the case where liblayout and its headers aren't in
+# a standard location. It also doesn't say what to do if liblayout is or
+# is not found.
+#
+# You should be able to find many examples in the Xorg sources.
+
