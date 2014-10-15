@@ -1,0 +1,12 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos: exemplo 01
+@ Autor: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Versión:
+
+«
+   b
+  « 
+    b 2 *
+  »
+»

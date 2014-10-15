@@ -1,0 +1,6 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> a N l
+  \<< "Solenoide
+nucleo de ar" 39.5 N 2 ^ * a 2 ^ * 9 a * 10 l * + / \->NUM \GmH _
+  \>>
+\>>

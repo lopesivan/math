@@ -1,0 +1,7 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> b a
+  \<< "Cabo coaxial
+a- raio int
+b- raio ext" u 2 \pi * / b a / LN * \->NUM 'H/m' _
+  \>>
+\>>

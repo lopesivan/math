@@ -1,0 +1,7 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> N S R
+  \<< "Toroide secao
+reta circular 
+raio medio" u N 2 ^ * S * 2 \pi * R * / \->NUM H _
+  \>>
+\>>

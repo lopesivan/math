@@ -1,0 +1,5 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> V
+  \<< 'X=V(1)' EVAL SUBST 'Y=V(2)' EVAL SUBST EVAL
+  \>>
+\>>

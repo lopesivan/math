@@ -1,0 +1,3 @@
+%%HP: T(3)A(R)F(.);
+\<< "Forma polar" '\.dR(U)=1/R*\.d\Gh(V)' '\.dR(V)=-(1/R)*\.d\Gh(U)'
+\>>

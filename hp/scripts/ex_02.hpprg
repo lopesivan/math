@@ -1,0 +1,16 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Autor:
+@ E-mail:
+@ Versión:
+@ Creado con HPUserEdit 6
+
+@ %NAME%= modulo
+@ %DIR%= alpha
+
+«
+   a b
+  «
+   a b - ABS
+  »
+»

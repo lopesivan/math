@@ -1,0 +1,14 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> R L C I0 I1
+  \<< R 2. L * / '\Ga' STO L C * \v/ INV 'w0' STO w0 2. ^ \Ga 2. ^ - \v/ 'wd' STO
+    IF \Ga w0 >
+    THEN s 2. ^ R L / s * + L C * INV + 0. = 's' ISOL EVAL OBJ\-> DROP DROP 'S1' STO DROP OBJ\-> DROP DROP 'S2' STO DROP 'I=A1*EXP(S1*t)+A2*EXP(S2*t)'
+    END
+    IF \Ga w0 ==
+    THEN '(A2+A1*t)*EXP(-\Ga*t)' I0 = t 0. = SUBST EVAL '-(((\Ga*t-1.)*A1+\Ga*A2)/EXP(\Ga*t))' I1 = t 0. = SUBST EVAL 2. \->LIST SISTEMA2 '(A2+A1*t)*EXP(-\Ga*t)'
+    END
+    IF \Ga w0 <
+    THEN 'EXP(-\Ga*t)*(B1*COS(wd*t)+B2*SIN(wd*t))' I0 = t 0. = SUBST EVAL '-((wd*B1+\Ga*B2)*SIN(wd*t)+(\Ga*B1-wd*B2)*COS(wd*t))/EXP(\Ga*t)' I1 = t 0. = SUBST EVAL 2. \->LIST SISTEMA2 'EXP(-\Ga*t)*(B1*COS(wd*t)+B2*SIN(wd*t))'
+    END { eq } PURGE SWAP SUBST SWAP SUBST EVAL
+  \>>
+\>>

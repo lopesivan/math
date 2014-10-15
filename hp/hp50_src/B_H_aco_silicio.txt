@@ -1,0 +1,21 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> X
+  \<<
+    IF X .3 <
+    THEN "ERRO,valor baixo" KILL
+    END
+    IF X 1.6 >
+    THEN "ERRO,valor alto" KILL
+    END "Curva do
+Aco Silicio"
+    IF X .3 \>= X 1 \<= AND
+    THEN '42.0797325318+66.7465516057*X-130.353109319*X^2+189.152874234*X^3' \->NUM 'A/M' _
+    END
+    IF X 1 > X 1.35 \<= AND
+    THEN '-13623.8893419+39254.338514*X-37614.401836*X^2+12150.3071265*X^3' \->NUM 'A/M' _
+    END
+    IF X 1.35 > X 1.6 \<= AND
+    THEN '4.35948960721E-3*EXP(8.87301525055*X)' \->NUM 'A/M' _
+    END
+  \>>
+\>>

@@ -1,0 +1,7 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> Z N
+  \<< Z ABS 'R' EVAL STO Z ARG EVAL '\Gh' STO 0 N 1 -
+    FOR I I LOGCOM
+    NEXT { \Gh R } PURGE
+  \>>
+\>>

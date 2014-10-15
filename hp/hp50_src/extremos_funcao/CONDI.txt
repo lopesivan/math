@@ -1,0 +1,18 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> X1 X2
+  \<<
+    IF X1 0 ==
+    THEN "INCONCLUSIVO"
+    END
+    IF X1 0 <
+    THEN "PONTO DE SELA"
+    END
+    IF X1 0 >
+    THEN
+      IF X2 0 >
+      THEN "MINIMO RELATIVO"
+      ELSE "MAXIMO RELATIVO"
+      END X2
+    END
+  \>>
+\>>

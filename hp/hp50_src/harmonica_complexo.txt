@@ -1,0 +1,9 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> U
+  \<< { V Z } PURGE U Y \.d X RISCH NEG U X \.d Y RISCH + EVAL V STO 'V' V = U V i * + EVAL Z STO "Harmonica"
+    IF Z X \.d X \.d X 1 = SUBST Y 1 = SUBST EVAL Z Y \.d Y \.d X 1 = SUBST Y 1 = SUBST EVAL + 0 ==
+    THEN
+    ELSE "Nao " SWAP +
+    END
+  \>>
+\>>

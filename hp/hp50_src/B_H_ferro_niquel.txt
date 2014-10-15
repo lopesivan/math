@@ -1,0 +1,21 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> X
+  \<<
+    IF X .3 <
+    THEN "ERRO,valor baixo" KILL
+    END
+    IF X 1.54 >
+    THEN "ERRO,valor alto" KILL
+    END "Curva do
+Ferro niquel"
+    IF X .3 \>= X .9 \<= AND
+    THEN '-.103507768172+6.42724180862*X+99.5502341747*X^2-252.138896127*X^3+194.76152174*X^4' \->NUM 'A/M' _
+    END
+    IF X .9 > X 1.43 \<= AND
+    THEN '8.60897915722E-2*EXP(6.44612127051*X)' \->NUM 'A/M' _
+    END
+    IF X 1.43 > X 1.54 \<= AND
+    THEN '90093554.9665-249495796.175*X+259102236.855*X^2-119595454.935*X^3+20702515.7313*X^4' \->NUM 'A/M' _
+    END
+  \>>
+\>>

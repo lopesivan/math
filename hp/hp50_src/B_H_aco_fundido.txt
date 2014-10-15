@@ -1,0 +1,21 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> X
+  \<<
+    IF X .3 <
+    THEN "ERRO,Valor baixo" KILL
+    END
+    IF X 1.64 >
+    THEN "ERRO,Valor alto" KILL
+    END "Curva do
+Aco Fundido"
+    IF X .3 \>= X .7 \<= AND
+    THEN '75.7788+315.0037*X+169.0547*X^2' \->NUM 'A/M' _
+    END
+    IF X .7 > X 1.35 \<= AND
+    THEN '77.438923453*EXP(2.24549176471*X)' \->NUM 'A/M' _
+    END
+    IF X 1.35 > X 1.64 \<= AND
+    THEN '4397527.71927-12102789.8476*X+12494276.3349*X^2-5735318.50263*X^3+988439.64425*X^4' \->NUM 'A/M' _
+    END
+  \>>
+\>>

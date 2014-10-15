@@ -1,0 +1,5 @@
+%%HP: T(3)A(R)F(.);
+\<< \-> F
+  \<< F RE 'U' STO F IM 'V' STO U X DERIV V Y DERIV = U Y DERIV V X DERIV NEG = { U V } PURGE
+  \>>
+\>>
