@@ -1,0 +1,15 @@
+Begin4
+Title:		hp48cc
+Version:	1.3
+Entered-date:	19AUG01
+Description:	HP48 C Compiler (C -> RPN)
+Keywords:	hp hp48 C compiler RPN
+Author:		sandro@sigala.it (Sandro Sigala)
+Maintained-by:	sandro@sigala.it (Sandro Sigala)
+Primary-site:	sunsite.unc.edu /pub/Linux/devel/lang/c
+		32k hp48cc-1.3.tar.gz
+Alternate-site:	http://www.sigala.it/sandro/files/
+		32k hp48cc-1.3.tar.gz
+Platforms:	ANSI C compiler
+Copying-policy:	GPL
+End

@@ -1,0 +1,17 @@
+// gcd.hpc -- Finds greatest common denominators -*- C -*-
+//
+// Based on a version written by Jay Kominek <jkominek@debian.org>
+
+declare gcd(m, n) : z(0) {
+	if (n > m) {		// Swap values
+		z = m;
+		m = n;
+		n = z;
+	}
+	do {
+		z = m % n;
+		m = n;
+		n = z;
+	} while (z != 0);
+	m;			// Return value
+}

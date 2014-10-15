@@ -1,0 +1,7 @@
+// xexp.hpc -- Calculate the exponential -*- C -*-
+
+declare xexp(x) : s(0), n(0) {
+	for (; n < 20; ++n)
+		s += x**n / (n)!;
+	s;		// Return value
+}

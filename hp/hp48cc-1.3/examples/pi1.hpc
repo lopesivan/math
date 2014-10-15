@@ -1,0 +1,8 @@
+// pi1.hpc -- Calculate the pi (Algorithm 1) -*- C -*-
+
+// k is the number of iterations
+declare pi1(k): s(0) {
+	for (; k >= 0; --k)
+		s += (-1)**k/(2 * k + 1);
+	s * 4;		// Return value
+}

@@ -1,0 +1,12 @@
+// accuracy.hpc -- Test the HP48 accuracy -*- C -*-
+
+// Calculate the number of significant bits in the mantissa
+// of a floating number and the number of significant digits
+// in a decimal number.
+
+x = 2;
+j = 0;
+for (x = 2; x + 1 != x; x = x * 2)
+	j = j + 1;
+MSGBOX("Mantissa bits: " + j + "\nDecimal bits: " + 0.30103*j);
+PURGE(@{x, j});

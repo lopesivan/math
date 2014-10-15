@@ -1,0 +1,7 @@
+// fact.hpc -- Calculate the factorial -*- C -*-
+
+declare fact(i) : s(1) {
+	for (; i > 1; --i)
+		s *= i;
+	s;		// Return value
+}

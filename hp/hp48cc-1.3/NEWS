@@ -1,0 +1,17 @@
+Changes between hp48cc 1.2 - hp48cc 1.3
+
+* Added more examples.
+* Minor bug fixes.
+
+Changes between hp48cc 1.1 - hp48cc 1.2
+
+* Added a lot of examples.
+* Added local variables to language.
+* Added support for non-alphanumeric HP48 symbols in strings and identifiers.
+* Minor fixes to the language syntax.
+* Added raise to power operator `**'.
+
+Changes between hp48cc 1.0 - hp48cc 1.1
+
+* Fixes to documentation and package.
+* Fixed minor bugs.

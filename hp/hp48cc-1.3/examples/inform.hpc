@@ -1,0 +1,24 @@
+// inform.hpc -- Example of INFORM usage -*- C -*-
+
+def = @{};
+
+for (;;) {
+	r = INFORM(
+		"Menu test",
+		@{
+			@{"1:", "Red", 1},
+			@{"2:", "Blue", 2},
+			@{"3:", "Yellow", 3}
+		},
+		@{1, 1},
+		@{},
+		def
+	    );
+	if (r == 0) {
+		MSGBOX("Quitting"); 
+		PURGE(@{def, r});
+		KILL();
+	}
+}
+
+PURGE(@{def});

@@ -1,0 +1,18 @@
+This package is written in ANSI C and was tested only under SuSE Linux 7.2,
+but should compile with little or no change under any other UNIX OS.
+
+`hp48cc' is a C-like compiler that translates input code into the
+HP48 RPN language.  The language recognized by the compiler is only a small
+subset of the C language with some non-standard extensions.  However,
+the language is powerful enough to write complex programs simply.
+
+Please take a look at the examples contained into the `examples' directory
+for learning the syntax of this compiler.
+
+------------------------------------------------------------------------------
+
+Latest version can be found at my homepage:
+http://www.sigala.it/sandro/
+
+Any questions, comments, or bug reports should be sent to the author at the
+Internet email address <sandro@sigala.it>.

@@ -1,0 +1,36 @@
+// sort.hpc -- Sorting algorithms -*- C -*-
+
+// Operates on lists only; for example, try:
+// 	ssort(@{3, 9, 1, 5, 8, 2});
+
+// Simple sort
+declare ssort(l) : n(0), x(1), y(0), kx(0), ky(0) {
+	n = SIZE(l);
+	for (x = 1; x < n; ++x)
+		for (y = x + 1; y <= n; ++y) {
+			kx = GET(l, x);
+			ky = GET(l, y);
+			if (ky < kx)	// Swap values
+				l = PUT(PUT(l, x, ky), y, kx);
+		}
+	l;	// Return value
+}
+
+// Simple sort 2
+declare ssort2(l) : n(0), x(1), y(0), m(0), k(0), kx(0), ky(0) {
+	n = SIZE(l);
+	for (x = 1; x < n; ++x) {
+		m = GET(l, x);
+		k = x;
+		for (y = x + 1; y <= n; ++y) {
+			ky = GET(l, y);
+			if (ky < m) {
+				m = ky;
+				k = y;
+			}
+		}
+		kx = GET(l, x);
+		l = PUT(PUT(l, x, m), k, kx);
+	}
+	l;	// Return value
+}

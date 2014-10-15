@@ -1,0 +1,63 @@
+Certain HP48 symbols are not available in ASCII and are encoded into
+a sequence of ASCII characters.
+
+In hp48cc strings, you should use the ASCII translation (duplicating
+existing backslashes), while in identifier, where you cannot use symbols
+like <, > or -, you should use the translation found in the latest column.
+
+Example1: The HP48 OBJ-> built-in function should be called as
+	OBJ\-\>(parameter)
+while the string "->" (where -> is the right arrow symbol) should
+be written as
+	"this is the right arrow symbol: \\->"
+
+Example2: The HP48 square root built-in function should be called as
+	\\v\/(parameter)
+while in strings the square root symbol can be written as in
+	 "this is the square root symbol: \\v/"
+
+Note: If you want to insert a double quote character `"' into a string,
+you might use the following trick:
+	s = "double quote symbol: " + CHR(34);
+
+Code	HP48 symbol		ASCII trans	identifier trans
+128	angle			\<)		\\\<\)
+129	median			\x-		\\x\-
+130				\.V		\\\.V
+131	square root		\v/		\\v\/
+132	integral		\.S		\\\.S
+133	sum			\GS		\\GS
+134				\|>		\\\|\>
+135	pi			\pi		\\pi
+136	delta			\.d		\\\.d
+137	less or equal to	\<=		\\\<\=
+138	greaten or equal to	\>=		\\\>\=
+139	not equal to 		\=/		\\\=\/
+140	alpha			\Ga		\\Ga
+141	right arrow ->		\->		\\\-\>
+142	left arrow <-		\<-		\\\<\-
+143	down arrow		\|v		\\\|v
+144	up arrow		\|^		\\\|\^
+145	gamma			\Gg		\\Gg
+146	delta			\Gd		\\Gd
+147	epsilon			\Ge		\\Ge
+148	eta			\Gn		\\Gn
+149	phi			\Gh		\\Gh
+150	lambda			\Gl		\\Gl
+151	rho			\Gr		\\Gr
+152	sigma			\Gs		\\Gs
+153	tau			\Gt		\\Gt
+154	omega			\Gw		\\Gw
+155	upper case delta	\GD		\\GD
+156	upper case pi		\PI		\\PI
+157	upper case omega	\GW		\\GW
+158				\[]		\\\[\]
+159	infinity		\oo		\\oo
+171	<<			\<<		\\\<\<
+176	degrees symbol °	\^o		\\\^o
+181	mu			\Gm		\\Gm
+187	>>			\>>		\\\>\>
+215	x			\.x		\\\.x
+216				\O/		\\O\/
+223	beta			\Gb		\\Gb
+247	div			\:-		\\\:\-

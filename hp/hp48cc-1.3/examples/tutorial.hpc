@@ -1,0 +1,114 @@
+// tutorial.hpc -- Summary of the basic hp48cc syntax -*- C -*-
+
+// You can insert the code right there; you will
+// not need a main() function.
+
+// Push the string onto the stack and call the built-in
+// function MSGBOX.
+MSGBOX("Hello");
+
+// Declare a new variable and assign a value.
+foo = 1;	
+
+// Increment variable value.
+++foo;
+
+// Declare a new variable.
+bar = foo + 5;
+
+// Call the HP48 built-in function PURGE to remove
+// the two variables.  @{} is the HP48 built-in list.
+PURGE(@{foo, bar});
+
+// -------------------------------------------------------------------
+
+// Define a new function MYSUM with two paramenters.
+declare mysum(a, b) {
+	// Create a new variable and assign the sum
+	// of a and b.
+	s = a + b;	
+	// Push the value of s into the stack
+	s;
+	// Remove s from HP48 variables.
+	PURGE(@{s});
+}
+
+// The previous function is exactly equal to the
+// following, but this is faster.
+declare mysum2(a, b) {
+	// Push the sum into the stack
+	a + b;
+}
+
+// We defined two functions, now we can call them.
+
+a = mysum(1, 2);
+b = mysum2(4, 5);
+
+c = "The value of a is " + a + ".";
+d = "The value of b is " + b + ".";
+MSGBOX(c);
+MSGBOX(d);
+
+// Clean up
+PURGE(@{mysum, mysum2, a, b, c, d});
+
+// -------------------------------------------------------------------
+
+// If you wish, you can specify the variables local to the
+// function.  Local variables have automatically assigned a value and
+// are automatically removed at function exit.
+// Local variables are really useful and should be used instead
+// of hand-defined variables (as in function mysum), because:
+//	* Variables defined by hand and then PURGEd may collide with
+//        external variables;
+//	* If the function causes an error, variables defined by hand
+//	  are not removed;
+//	* Local variables always have a value assigned;
+//	* No need to call PURGE;
+//	* Programs using local variables are faster.
+
+declare area(h, w): a(0) {
+	a = h * w;	// Calculate area
+	a;		// Return value
+}
+
+MSGBOX("Area of 23x45: " + area(23, 45));
+
+PURGE(@{area});
+
+// -------------------------------------------------------------------
+
+// Define a new function CKSUM that returns
+// a sorta of checksum of the argument.
+declare cksum(s) : k(0) {
+	// Force string type; uses STR-> built-in
+	s = \\\-\>STR(s);
+	while (SIZE(s) > 0) {
+		k += NUM(HEAD(s));
+		s = TAIL(s);
+	}
+	k;			// Return value
+}
+
+MSGBOX("Checksum 1: " + cksum("Hello"));
+MSGBOX("Checksum 2: " + cksum("Foo"));
+MSGBOX("Checksum 3: " + cksum(@{a, b, c}));
+
+// Clean up
+PURGE(@{cksum});
+
+// -------------------------------------------------------------------
+
+// Calculate the distance between (x0, y0) and (x1, y1).
+declare distance(x0, y0, x1, y1) {
+	// \\v\/ is traslated by hp48cc to \v/, than translated
+        // by HP48 into the square root symbol (see README for more info).
+        // x**y means x raised to y.
+	\\v\/((x1 - x0)**2 + (y1 - y0)**2);
+}
+
+MSGBOX("Distance between (2, 3) and (5, 7): " + distance(2, 3, 5, 7));
+
+// Clean up
+PURGE(@{distance});

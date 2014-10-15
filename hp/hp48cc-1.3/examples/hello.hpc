@@ -1,0 +1,13 @@
+// hello.hpc -- Produces a familiar, friendly greeting -*- C -*-
+
+// Define main function
+declare main() {
+	// Call HP48 built-in function `MSGBOX'
+	MSGBOX("Hello world!");
+}
+
+// Call main function
+main();
+
+// Remove main function
+PURGE(@{main});

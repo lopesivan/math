@@ -1,0 +1,8 @@
+// pi2.hpc -- Calculate the pi (Algorithm 2) -*- C -*-
+
+// k is the number of iterations
+declare pi2(k) : s(0), x(0) {
+	for (x = -k; x <= k; x += .5)
+		s += EXP(-(x**2)) * .5;
+	s ** 2;		// Return value
+}
