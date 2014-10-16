@@ -1,83 +1,68 @@
 #! /bin/sed -f
 
 s|%%HP: T(3)A(R)F(.);|%%HP: T(0)A(D)F(.);|g
-# Start of program delimiter (<<)
-s|\\<<|\d171|g
-# Angle symbol for polar notation
-s/\\<\([^<]\)/\d128\1/g
-# End of program delimiter (>>)
-s|\\>>|\d187|g
-# Lowercase Greek pi
-s|\\pi|\d135|g
-# x with bar above it
-s|\\x-|\d129|g
-# Lowercase Greek gamma
-s|\\Gg|\d145|g
-# Lowercase Greek delta
-s|\\Gd|\d146|g
-# Lowercase Greek epsilon
-s|\\Ge|\d147|g
-# Lowercase Greek eta
-s|\\Gn|\d148|g
-# Lowercase Greek theta
-s|\\Gh|\d149|g
-# Lowercase Greek lambda
-s|\\Gl|\d150|g
-# Lowercase Greek rho
-s|\\Gr|\d151|g
-# Lowercase Greek sigma
-s|\\Gs|\d152|g
-# Lowercase Greek tau
-s|\\Gt|\d153|g
-# Lowercase Greek omega
-s|\\Gw|\d154|g
-# Uppercase Greek Delta
-s|\\GD|\d155|g
-# Uppercase Greek Pi
-s|\\GP|\d156|g
-# Uppercase Greek Omega
-s|\\GW|\d157|g
 
-s|\\\.V|\d130|g
-# square root symbol
-s|\\v\/|\d131|g
-# Integral symbol
-s|\\\.S|\d132|g
-# Uppercase Greek Sigma
-s|\\GS|\d133|g
-#
+s|\\omega|\d154|g
+s|\\Delta|\d155|g
+s|\\Omega|\d157|g
+s|\\Sigma|\d133|g
+s|\\gama|\d145|g
+s|\\delta|\d146|g
+s|\\epsilon|\d147|g
+s|\\infinity|\d159|g
+s|\\theta|\d149|g
+s|\\sigma|\d152|g
+s|\\lambda|\d150|g
+s|\\tau|\d153|g
+s|\\eta|\d148|g
+s|\\sum|\d133|g
+s|\\rho|\d151|g
+s|\\beta|\d223|g
+
 s|\\\|>|\d134|g
-# Differentiation symbol
-s|\\\.d|\d136|g
-# Less-than or equal-to symbol
-s|\\<=|\d137|g
-# Greater-than or equal-to symbol
-s|\\>=|\d138|g
-# Not-equal-to symbol
-s|\\=\/|\d139|g
-# Lowercase Greek alpha
-s|\\Ga|\d140|g
-# Right arrow
-s|\\->|\d141|g
-# Left arrow
-s|\\<-|\d142|g
-# Down arrow
-s|\\\|v|\d143|g
-# Up arrow
 s|\\\|^|\d144|g
-#
-s|\[\]|\d158|g
-# Infinity symbol
-s|\\oo|\d159|g
-# Degree symbol
-s|\\^o|\d176|g
-# Lowercase Greek mu
-s|\\Gm|\d181|g
-# Cross-product operator
+s|\\\.d|\d136|g
+s|\\\.S|\d132|g
+s|\\\.V|\d130|g
 s|\\\.x |\d215|g
-# Slashed Oh
-s|\\O\/|\d216|g
-# Lowercase Greek beta
-s|\\Gb|\d223|g
-# Division symbol
+s|\\\|v|\d143|g
+
+s|\\<<|\d171|g
+s|\\<-|\d142|g
+s/\\<\([^<]\)/\d128\1/g
+s|\\<=|\d137|g
+s|\\x-|\d129|g
+s|\\v\/|\d131|g
+s|\\=\/|\d139|g
+s|\\>>|\d187|g
+s|\\>=|\d138|g
+s|\\->|\d141|g
 s|\\:-|\d247|g
+
+s|\\Ga|\d140|g
+s|\\Gb|\d223|g
+s|\\Gd|\d146|g
+s|\\GD|\d155|g
+s|\\Ge|\d147|g
+s|\\Gg|\d145|g
+s|\\Gh|\d149|g
+s|\\Gl|\d150|g
+s|\\Gm|\d181|g
+s|\\Gn|\d148|g
+s|\\GP|\d156|g
+s|\\Gr|\d151|g
+s|\\GS|\d133|g
+s|\\Gs|\d152|g
+s|\\Gt|\d153|g
+s|\\Gw|\d154|g
+s|\\GW|\d157|g
+s|\\^o|\d176|g
+s|\\mu|\d181|g
+s|\\O\/|\d216|g
+s|\\oo|\d159|g
+s|\\pi|\d135|g
+s|\\Pi|\d156|g
+s|\\PI|\d156|g
+
+s|\[\]|\d158|g
+

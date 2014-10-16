@@ -1,0 +1,46 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+128   ;  \<)  ; Angle symbol for polar notation
+129   ;  \x-   ; x with bar above it
+130   ;  \.V   ;
+131   ;  \v/   ; Square root symbol
+132   ;  \.S   ; Integral symbol
+133   ;  \GS   ; Uppercase Greek Sigma
+134   ;  \|>   ;
+135   ;  \pi   ; Lowercase Greek pi
+136   ;  \.d   ; Differentiation symbol
+137   ;  \<=  ; Less-than or equal-to symbol
+138   ;  \>=   ; Greater-than or equal-to symbol
+139   ;  \=/   ; Not-equal-to symbol
+140   ;  \Ga   ; Lowercase Greek alpha
+141   ;  \->   ; Right arrow
+142   ;  \<-   ; Left arrow
+143   ;  \|v   ; Down arrow
+144   ;  \|^   ; Up arrow
+145   ;  \Gg   ; Lowercase Greek gamma
+146   ;  \Gd   ; Lowercase Greek delta
+147   ;  \Ge   ; Lowercase Greek epsilon
+148   ;  \Gn   ; Lowercase Greek eta
+149   ;  \Gh   ; Lowercase Greek theta
+150   ;  \Gl   ; Lowercase Greek lambda
+151   ;  \Gr   ; Lowercase Greek rho
+152   ;  \Gs   ; Lowercase Greek sigma
+153   ;  \Gt   ; Lowercase Greek tau
+154   ;  \Gw   ; Lowercase Greek omega
+155   ;  \GD   ; Uppercase Greek Delta
+156   ;  \GP   ; Uppercase Greek Pi
+157   ;  \GW   ; Uppercase Greek Omega
+158   ;  []   ;
+159   ;  \oo   ; Infinity symbol
+171   ;  \<<   ; Start of program delimiter (<<)
+176   ;  \^o   ; Degree symbol
+181   ;  \Gm   ; Lowercase Greek mu
+187   ;  \>>   ; End of program delimiter (>>)
+215   ;  \.x    ; Cross-product operator
+216   ;  \O/   ; Slashed Oh
+223   ;  \Gb   ; Lowercase Greek beta
+247   ;  \:-   ; Division symbol

@@ -1,0 +1,15 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<< \-> N
+    \<<
+        0 'S' STO
+        1 N FOR I
+            S I + 'S' STO
+        NEXT S 'SOMA' \->TAG
+    \>>
+
+\>>
