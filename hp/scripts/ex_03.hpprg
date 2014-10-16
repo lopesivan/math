@@ -1,0 +1,25 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Autor:
+@ E-mail:
+@ VersiÛn:
+@ Creado con HPUserEdit 6
+
+´
+"O valor de A e B"
+{
+{ "A:" "O valor de A"  }
+{ "B:" "O valor de B"  }
+}
+1
+{ }
+{ }
+INFORM DROP OBJç DROP
+'b' STO
+'a' STO
+
+'a+b' EVAL 'soma' çTAG
+
+'b' PURGE
+'a' PURGE
+ª
