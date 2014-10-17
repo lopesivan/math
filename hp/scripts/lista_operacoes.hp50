@@ -1,0 +1,18 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+
+\<<
+    1 2 3 4  5 5 \->LIST 'L1' STO
+    6 7 8 9 10 5 \->LIST 'L2' STO
+    {6 7 8 9 10} 'L3' STO
+
+
+    'L1' PURGE
+    'L2' PURGE
+    'L3' PURGE
+
+\>>

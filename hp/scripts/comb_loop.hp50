@@ -4,12 +4,11 @@
 @ E-mail: ivanlopes@id.uff.br
 @ Version:
 
-\<< \-> N
+\<< \-> M N
     \<<
-        0 'S' STO
-        1 N FOR I
-            S I + 'S' STO
-        NEXT S 'SOMA' \->TAG
+        M !
+        N !
+        M N - !
+        * / "COMB(M,N)" \->TAG
     \>>
-    'S' PURGE
 \>>

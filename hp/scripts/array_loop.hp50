@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<< \-> n
+    \<< 1 n
+        FOR I
+            'I^2' EVAL
+        NEXT {1 n} \->ARRY
+    \>>
+\>>

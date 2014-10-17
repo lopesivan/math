@@ -6,10 +6,11 @@
 
 \<< \-> N
     \<<
-        0 'S' STO
+        1 'F' STO
         1 N FOR I
-            S I + 'S' STO
-        NEXT S 'SOMA' \->TAG
+            F I * 'F' STO
+        NEXT F 'FATORIAL' \->TAG
     \>>
-    'S' PURGE
+
+    'F' PURGE
 \>>

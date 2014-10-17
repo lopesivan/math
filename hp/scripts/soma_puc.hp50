@@ -1,0 +1,20 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+@ f(x) = 2x + 3
+@ calcule: f(1)+ f(2) + f(3) + ... + f(25)
+
+\<<
+    \<< \-> x '2*x+3' \>> 'func' STO
+
+    0 'S' STO
+    1 25 FOR I
+        I func S + 'S' STO
+    NEXT S
+
+    'func' PURGE
+    'S' PURGE
+\>>
