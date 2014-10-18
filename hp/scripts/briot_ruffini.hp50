@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    CLEAR
+    '((x-2)^2)*(x-3)*(x-4)'
+    'e0' STO
+    e0 EXPAND 'e1' STO
+
+    e1 2
+    HORNER DROP
+    HORNER DROP
+    HORNER DROP
+
+    {e0 e1} PURGE
+\>>

@@ -1,0 +1,25 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    CLEAR
+    'x^4 - 4' COLLECT
+    'x^2 - 4' COLLECT
+    'x^16 + x^4 - 4' COLLECT
+
+    'x^4 - 4' 'a4' STO
+    'x^2 - 4' 'a2' STO
+    'x^16 + x^4 - 4' 'a16' STO
+
+    a2 COLLECT
+    a4 COLLECT
+    a16 COLLECT
+
+    {a2 a4 a16} COLLECT MAP
+    {a2 a4 a16} FACTOR MAP
+
+    {a2 a4 a16} PURGE
+\>>

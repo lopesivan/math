@@ -1,0 +1,50 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    CLEAR
+    ['a' 'b'] 'u' STO
+    ['c' 'd'] 'v' STO
+    [1 2] 'u2' STO
+    [3 4] 'v2' STO
+    u2 v2 +
+    u2 3 *
+    u2 ABS
+    u v DOT
+    u2 v2 DOT
+    u v CROSS
+    u2 v2 CROSS
+
+    {u v u2 v2} PURGE
+
+    \<< \-> x '2*x' \>> 'f' STO
+
+    2 f
+
+    {1 2 3 4 5 6 7 8} f MAP
+
+    {f} PURGE
+
+    1 2 3 4 5 6 7 7 \->LIST 'L1' STO
+
+    L1 \DeltaLIST
+    L1 \SigmaLIST
+    L1 \PiLIST
+    L1 SORT
+    L1 REVLIST
+    L1 L1 ADD
+
+    'n^2'
+    'n'
+    1
+    5
+    1
+    SEQ
+    'L2' STO
+    L2 REVLIST
+
+
+\>>

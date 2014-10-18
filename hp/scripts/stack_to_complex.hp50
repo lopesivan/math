@@ -4,7 +4,7 @@
 @ E-mail: ivanlopes@id.uff.br
 @ Version:
 
-\<< \<< INV SWAP INV + INV \>>
-    'rp' STO
+\<< \<< \-> a, b
+    \<<  '(a,\< b)' EVAL \>>
+    \>> 'stk\->C' STO
 \>>
-

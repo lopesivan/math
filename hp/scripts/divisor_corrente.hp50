@@ -4,7 +4,8 @@
 @ E-mail: ivanlopes@id.uff.br
 @ Version:
 
-\<< \<< INV SWAP INV + INV \>>
-    'rp' STO
+
+\<< \<< DUP UNROT + / * \>>
+    'dc' STO
 \>>
 

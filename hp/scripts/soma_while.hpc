@@ -1,0 +1,14 @@
+// soma_while.hpc -- Calculate the 1/2^n
+
+declare f(l) : t(0), s(0), n(0)
+{
+    while(t<=l) {
+        t = 1/(2^n);
+        s += t;
+        n++;
+    }
+
+    s;      // Return value
+}
+
+// -*- vim: set ts=4 sw=4 tw=78 ft=c: -*-

@@ -1,0 +1,22 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    \<< \-> M, N
+    \<< 1 M FOR I
+            1 N FOR J
+                IF 'I == J'
+                THEN
+                    1
+                ELSE
+                    I 2 ^
+                END
+            NEXT N ROW\->
+        NEXT M ROW\->
+    \>>
+    \>> 'f' STO
+\>>
+
