@@ -4,18 +4,10 @@
 @ E-mail: ivanlopes@id.uff.br
 @ Version:
 
-\<<
-    \<<
-        'briot' PURGE
-        'clean' PURGE
-        'deg\->rad' PURGE
-        'pho\->t' PURGE
-        'stk\->C' PURGE
-        'cofs' PURGE
-        'eq' PURGE
-        'dc' PURGE
-        'rp' PURGE
+\<< \<< HOME
+        'CIR' PGDIR
 
+        'clean' PURGE
     \>> 'clean' STO
 \>>
 

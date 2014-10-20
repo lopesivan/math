@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<< \<< HOME
+        'in' PGDIR
+
+        'clean' PURGE
+    \>> 'clean' STO
+\>>
+

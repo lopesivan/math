@@ -1,0 +1,38 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+@PATH 'CIR' +
+@UPDIR
+@  'CIR' PGDIR
+@  'CIR' CRDIR
+@ 'CIR' PATH
+@   PATH 'CIR' +
+@   'KK' STO
+@PATH 'CIR' +
+@UPDIR
+@  'CIR' PGDIR
+@  'CIR' CRDIR
+@ 'CIR' PATH
+@   PATH 'CIR' +
+@   'KK' STO
+@'CIR' PGDIR
+@'KI' PURGE
+@CLVAR
+@'CIR' CRDIR
+@5 'KI' STO
+@PATH 'CIR'
+@CRDIR
+
+\<<
+    PATH
+    'CIR' CRDIR
+
+    DIR
+    \<< INV SWAP INV + INV \>>
+    'rp' STO
+    END
+\>>
+
