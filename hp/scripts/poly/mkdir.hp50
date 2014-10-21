@@ -1,0 +1,41 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    HOME root     @ diretório raiz
+    'poly' CRDIR  @ mkdir poly
+    poly          @ cd poly
+
+    {up progs f p} 'CST' STO
+
+        'f' CRDIR @ mkdir f
+         f        @ cd f
+
+        {up FCOEF FROOTS}
+        'CST'
+        STO
+
+         UPDIR    @ cd ..
+
+        'p' CRDIR @ mkdir p
+         p        @ cd p
+
+        {up PCOEF PROOTS}
+        'CST'
+        STO
+
+         UPDIR    @ cd ..
+
+        'P' CRDIR @ mkdir P
+         P        @ cd P
+
+        {up briot}
+        'CST' STO
+
+         UPDIR    @ cd ..
+
+    UPDIR         @ cd ..
+\>>

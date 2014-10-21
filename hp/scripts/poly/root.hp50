@@ -1,0 +1,307 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    HOME
+    'root' CRDIR root
+
+    @ Definindo funcoes globais
+    @ ========================================================================
+    @
+
+    \<< @ up
+        UPDIR
+        22.2 KEYEVAL
+    \>> 'up' STO
+
+    @ =======================================================================
+    @ =======================================================================
+    @ =======================================================================
+
+    {in sol cir calc poly stat}
+    'CST' STO
+
+    @ ========================================================================
+    @
+    @ INPUT
+    @
+    @ ========================================================================
+    'in' CRDIR in
+        @
+        @ local functions
+        @
+
+        @ foo
+
+        @
+        @ diretório de programas
+        @
+        'P' CRDIR P
+            {{\|^ up}
+            aaa }
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {up
+         P
+         a b c}
+         'CST' STO
+    UPDIR @ ==================================================================
+
+    @ ========================================================================
+    @
+    @ SOLVE
+    @
+    @ ========================================================================
+    'sol' CRDIR sol
+        @
+        @ local functions
+        @
+
+        @ foo
+
+        @
+        @ diretório de programas
+        @
+
+        'P' CRDIR P
+            {{\|^ up}
+            psA psB}
+            'CST' STO
+        UPDIR
+
+        'solve' CRDIR solve
+            {{\|^ up}
+            {x \<< SOLVEVX \>>}
+            {y \<< 'Y' SOLVE \>>}
+            {z \<< 'Z' SOLVE \>>} }
+            'CST' STO
+        UPDIR
+
+        'zeros' CRDIR zeros
+            {{\|^ up}
+            {x \<< 'X' ZEROS \>>}
+            {y \<< 'Y' ZEROS \>>}
+            {z \<< 'Z' ZEROS \>>} }
+            'CST' STO
+        UPDIR
+
+        'factor' CRDIR factor
+            {{\|^ up}
+            {f FACTOR}
+            {s FACTORS}
+            }
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {{\|^ up}
+         P
+         solve
+         zeros
+         {expand EXPAND}
+         factor }
+         'CST' STO
+
+    UPDIR @ ==================================================================
+
+    @ ========================================================================
+    @
+    @ CIRCUITOS
+    @
+    @ ========================================================================
+    'cir' CRDIR cir
+
+        @
+        @ local functions
+        @
+
+        \<< @ "Transformação Δ-Y (Triângulo-Estrela)"
+            3 DUPN
+            3 DUPN 3 DUPN 3 DUPN
+            + +
+            4 ROLLD
+            + +
+            5 ROLLD 5 ROLLD
+            + +
+            6 PICK 6 PICK
+            * SWAP /
+            6 ROLLD
+            4 ROLL
+            4 PICK
+            * SWAP /
+            4 ROLLD
+            3 ROLLD
+            * SWAP /
+            SWAP
+        \>> '=delta-estrela='  STO
+
+        \<< @ "Transformação Y-Δ (Estrela-Triângulo)"
+            3 DUPN
+            3 DUPN
+            3 DUPN
+            * 4 ROLLD
+            * SWAP 4 ROLL
+            * + + DUP ROT
+            / SWAP ROT SWAP DUP 5 ROLL
+            / SWAP ROT
+            /
+            ROT
+        \>> '=estrela-delta=' STO
+
+        \<< @ função resistência em paralelo
+            2 DUPN
+            INV SWAP INV + INV
+        \>>  'rp' STO
+
+        \<< @ função divisor de tensão
+            3 DUPN
+            DUP UNROT + / *
+        \>> 'dc' STO
+
+        @
+        @ diretório de programas
+        @
+        'P' CRDIR P
+            {{\|^ up}
+            pcA pcB}
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {{\|^ up}
+         P
+         dc rp =delta-estrela= =estrela-delta=}
+         'CST' STO
+    UPDIR @ ==================================================================
+
+    @ ========================================================================
+    @
+    @ Cálculo
+    @
+    @ ========================================================================
+    'calc' CRDIR calc
+        @
+        @ local functions
+        @
+
+        @ foo
+
+        @
+        @ diretório de programas
+        @
+        'P' CRDIR P
+            {{\|^ up}
+            cal }
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {up
+         P
+         a b c}
+         'CST' STO
+
+    UPDIR @ ==================================================================
+
+    @ ========================================================================
+    @
+    @ POLINÔMIOS
+    @ ==========
+    @ ========================================================================
+
+    'poly' CRDIR poly
+
+        @
+        @ local functions
+        @
+        \<< @ briot(grau, raiz)
+            \-> grau, raiz
+            \<< {} 'cofs' STO                   @ inicializando cofs como lista vazia
+                eq raiz                         @ carrega eq e raiz
+                1 grau FOR I                    @
+                    HORNER cofs + 'cofs' STO    @
+                NEXT {1} cofs +
+                'cofs' PURGE
+            \>>
+        \>> 'briot' STO
+
+        @
+        @ diretório de programas
+        @
+        'P' CRDIR P
+            {{\|^ up}
+            briot }
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {{\|^ up}
+         P
+         solve
+         zeros
+         {expand EXPAND}
+         factor }
+         'CST' STO
+
+    UPDIR @ ==================================================================
+
+    @ ========================================================================
+    @
+    @ Estatística
+    @ ===========
+    @ ========================================================================
+
+    'stat' CRDIR stat
+        @
+        @ local functions
+        @
+
+        @ foo
+
+        @
+        @ diretório de programas
+        @
+        'P' CRDIR P
+            {{\|^ up}
+            r }
+            'CST' STO
+        UPDIR
+
+        @
+        @ menu
+        @
+         {up
+         P
+         {C COMB}
+         {A PERM}
+         {R RAND} }
+         'CST' STO
+
+    UPDIR @ ==================================================================
+
+    @ =======================================================================
+    @ =======================================================================
+    @ =======================================================================
+
+    'uff' CRDIR uff
+    \<< UPDIR
+      22.2 KEYEVAL
+    \>> 'load' STO
+    UPDIR
+\>>
+

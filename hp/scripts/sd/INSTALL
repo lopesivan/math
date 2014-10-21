@@ -1,0 +1,16 @@
+RUN:
+	ROOT
+
+	POLY
+	P1
+
+	CIR
+
+	SOL
+
+	CALC
+
+	EDO
+
+	IN
+

@@ -1,0 +1,63 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    HOME root                         @ diretório raiz
+    'cir' CRDIR                       @ mkdir
+    cir                               @ cd cir
+
+    \<<  @ "Transformação Δ-Y (Triângulo-Estrela)"
+        3 DUPN
+        3 DUPN 3 DUPN 3 DUPN
+        + +
+        4 ROLLD
+        + +
+        5 ROLLD 5 ROLLD
+        + +
+        6 PICK 6 PICK
+        * SWAP /
+        6 ROLLD
+        4 ROLL
+        4 PICK
+        * SWAP /
+        4 ROLLD
+        3 ROLLD
+        * SWAP /
+        SWAP
+    \>> '=delta-estrela='  STO
+
+    \<< @ "Transformação Y-Δ (Estrela-Triângulo)"
+        3 DUPN
+        3 DUPN
+        3 DUPN
+        * 4 ROLLD
+        * SWAP 4 ROLL
+        * + + DUP ROT
+        / SWAP ROT SWAP DUP 5 ROLL
+        / SWAP ROT
+        /
+        ROT
+    \>> '=estrela-delta=' STO
+
+    \<< @ função resistência em paralelo
+        2 DUPN
+        INV SWAP INV + INV
+    \>>  'rp' STO
+
+    \<< @ função divisor de tensão
+        3 DUPN
+        DUP UNROT + / *
+    \>> 'dc' STO
+
+    'P' CRDIR                     @ mkdir P
+        P                         @ cd P
+        0 'briot' STO             @ link vazio pronto para receber função
+        \<< UPDIR \>> 'up' STO    @ primeiro botão do menu linkado com a função UPDIR
+        UPDIR                     @ cd ..
+
+   \<< UPDIR \>> 'up' STO         @ primeiro botão do menu linkado com a função UPDIR
+    UPDIR                         @ cd ..
+\>>

@@ -5,11 +5,7 @@
 @ Version:
 
 \<<
-   PATH cir
-
-   << INV SWAP INV + INV \>>
-   'rp' STO
-
-   UPDIR
+    HOME
+   'root' PGDIR
 \>>
 

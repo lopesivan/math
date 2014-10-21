@@ -1,0 +1,54 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+    HOME root          @ diretório raiz
+    'in' CRDIR         @ mkdir in
+    in                 @ cd cir
+
+    @ trocar entre cordenadas retangulares e polar
+    \<< -15 CF -16 FS? \-> X
+    \<<
+        IF 'X'
+        THEN RECT
+        ELSE CYLIN
+        END
+    \>>
+    \>> '=XYZ-POLAR=' STO
+
+    @ trocar RAD -> DEG
+    \<< -18 CF -17 FS? \-> X
+    \<<
+        IF 'X'
+        THEN DEG
+        ELSE RAD
+        END
+    \>>
+    \>> '=DEG-RAD=' STO
+
+    @ pega a e b no stack e transforma em (a,b)
+    \<< \-> a, b
+        \<<  '(a,\< b)' EVAL \>>
+    \>> 'S\->C' STO
+
+    \<< UPDIR \>> 'up' STO
+@ ============================================================================
+    'C' CRDIR                     @ mkdir P
+     C                            @ cd P
+
+     UPDIR                     @ cd ..
+@ ============================================================================
+    'M' CRDIR                     @ mkdir P
+     M                            @ cd P
+     UPDIR                     @ cd ..
+@ ============================================================================
+    'L' CRDIR                     @ mkdir P
+     L                            @ cd P
+     UPDIR                        @ cd ..
+
+@ ============================================================================
+    UPDIR                         @ cd ..
+\>>

@@ -4,10 +4,9 @@
 @ E-mail: ivanlopes@id.uff.br
 @ Version:
 
-\<< \<< HOME
-        'poly' PGDIR
-
-        'clean' PURGE
-    \>> 'clean' STO
+\<<
+    HOME
+    root
+   'poly' PGDIR
 \>>
 

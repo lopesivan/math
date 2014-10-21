@@ -2,6 +2,13 @@
 
 s|%%HP: T(3)A(R)F(.);|%%HP: T(0)A(D)F(.);|g
 
+s|=delta-estrela=|\d155\d173Y|g
+s|=estrela-delta=|Y\d173\d155|g
+
+s|=DEG-RAD=|D\d142\d141R|g
+s|=XYZ-POLAR=|XY\d142\d141P|g
+
+
 s|\\omega|\d154|g
 s|\\Delta|\d155|g
 s|\\Omega|\d157|g
