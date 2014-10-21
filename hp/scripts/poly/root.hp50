@@ -34,23 +34,86 @@
         @ local functions
         @
 
-        @ foo
+        @ trocar entre cordenadas retangulares e polar
+        \<< -15 CF -16 FS? \-> X
+        \<<
+            IF 'X'
+            THEN RECT
+            ELSE CYLIN
+            END
+        \>>
+        \>> '=XYZ-POLAR=' STO
+
+        @ trocar RAD -> DEG
+        \<< -18 CF -17 FS? \-> X
+        \<<
+            IF 'X'
+            THEN DEG
+            ELSE RAD
+            END
+        \>>
+        \>> '=DEG-RAD=' STO
+
+        @ pega a e b no stack e transforma em (a,b)
+        \<< \-> a, b
+            \<<  '(a,\< b)' EVAL \>>
+        \>> 'S\->C' STO
 
         @
         @ diretório de programas
         @
-        'P' CRDIR P
+        'onOff' CRDIR onOff
             {{\|^ up}
-            aaa }
+            =XYZ-POLAR= =DEG-RAD= }
+            'CST' STO
+        UPDIR
+        @
+        @ diretório de programas
+        @
+        'XYZ' CRDIR XYZ
+            {{\|^ up}
+            X Y Z A B C D E F G H I J K L M N O P Q R S T U V X Z }
+            'CST' STO
+        UPDIR
+        @
+        @ diretório de programas
+        @
+        'C' CRDIR C
+            {{\|^ up}
+            {op \<< 44.2 KEYEVAL 33.2 KEYEVAL  13.1 KEYEVAL \>> }
+             S\->C
+            =XYZ-POLAR= =DEG-RAD= }
+            'CST' STO
+        UPDIR
+        @
+        @ diretório de programas
+        @
+        'M' CRDIR M
+            {{\|^ up}
+            {op \<< 44.2 KEYEVAL 12.1 KEYEVAL \>> }
+            {input \->ARRY}
+            {vec \<< 44.2 KEYEVAL 11.1 KEYEVAL \>> }
+            =XYZ-POLAR= =DEG-RAD= }
+            'CST' STO
+        UPDIR
+        @
+        @ diretório de programas
+        @
+        'L' CRDIR L
+            {{\|^ up}
+            {op \<< 44.2 KEYEVAL 13.1 KEYEVAL \>> }
+            {input \->LIST}
+            =XYZ-POLAR= =DEG-RAD= }
             'CST' STO
         UPDIR
 
         @
         @ menu
         @
-         {up
-         P
-         a b c}
+         {{\|^ up}
+         {OnOff onOff}
+         XYZ
+         C M L }
          'CST' STO
     UPDIR @ ==================================================================
 
@@ -72,7 +135,12 @@
 
         'P' CRDIR P
             {{\|^ up}
-            psA psB}
+            { op \<< 82.2 KEYEVAL 13.1 KEYEVAL \>> }
+            {Lapla LAP }
+            {ILapl ILAP}
+            {edo0  LDEC}
+            {edo   DESOLVE}
+            }
             'CST' STO
         UPDIR
 
@@ -104,7 +172,7 @@
         @ menu
         @
          {{\|^ up}
-         P
+         {+ P}
          solve
          zeros
          {expand EXPAND}
@@ -180,7 +248,7 @@
         @ menu
         @
          {{\|^ up}
-         P
+         {+ P}
          dc rp =delta-estrela= =estrela-delta=}
          'CST' STO
     UPDIR @ ==================================================================
@@ -205,13 +273,55 @@
             cal }
             'CST' STO
         UPDIR
+        'dx' CRDIR dx
+            {{\|^ up}
+            {x \<< DERVX \>>}
+            {y \<< 'Y' DERIV \>>}
+            {z \<< 'Z' DERIV \>>} }
+            'CST' STO
+        UPDIR
 
+        'risch' CRDIR risch
+            {{\|^ up}
+            {x \<< 'X' RISCH \>>}
+            {y \<< 'Y' RISCH \>>}
+            {z \<< 'Z' RISCH \>>} }
+            'CST' STO
+        UPDIR
+
+        'ibp' CRDIR ibp
+            {{\|^ up}
+            {x \<< 'X' IBP \>>}
+            {y \<< 'Y' IBP \>>}
+            {z \<< 'Z' IBP \>>} }
+            'CST' STO
+        UPDIR
+
+        'I' CRDIR I
+            {{\|^ up}
+            {x \<< INTVX \>>}
+            {RISCH risch }
+            {part  ibp  }
+            {def   PREVAL} }
+            'CST' STO
+        UPDIR
+
+        'III' CRDIR III
+            {{\|^ up}
+            {nabla \<< ['X' 'Y' 'Z'] DERIV\>>}
+            {grad  \<< ['X' 'Y' 'Z'] HESS\>>}
+            {divF  \<< ['X' 'Y' 'Z'] DIV\>>}
+            {rotF  \<< ['X' 'Y' 'Z'] CURL\>>}}
+            'CST' STO
+        UPDIR
         @
         @ menu
         @
-         {up
-         P
-         a b c}
+         {{\|^ up}
+         {+ P}
+         {I  I}
+         {Dx dx}
+         {vec III}}
          'CST' STO
 
     UPDIR @ ==================================================================
@@ -243,19 +353,40 @@
         @
         'P' CRDIR P
             {{\|^ up}
+            { op \<< 92.2 KEYEVAL 12.1 KEYEVAL \>> }
             briot }
             'CST' STO
         UPDIR
 
+        'f' CRDIR f
+            {{\|^ up}
+            {coef FCOEF}
+            {root FROOTS}
+            {q QUOT}
+            {r REMAINDER}
+            {part PARTFRAC}
+            }
+            'CST' STO
+        UPDIR
+        'p' CRDIR p
+            {{\|^ up}
+            {coef PCOEF}
+            {root PROOT}
+            {val  PEVAL}
+            {input \->ARRY}
+            }
+            'CST' STO
+        UPDIR
         @
         @ menu
         @
          {{\|^ up}
-         P
-         solve
-         zeros
+         {+ P}
+         p
+         f
          {expand EXPAND}
-         factor }
+         {factor FACTOR}
+         }
          'CST' STO
 
     UPDIR @ ==================================================================
@@ -278,15 +409,16 @@
         @
         'P' CRDIR P
             {{\|^ up}
-            r }
+            {op \<< 44.2 KEYEVAL 15.1 KEYEVAL \>> }
+            prob }
             'CST' STO
         UPDIR
 
         @
         @ menu
         @
-         {up
-         P
+         {{\|^ up}
+         {+ P}
          {C COMB}
          {A PERM}
          {R RAND} }
@@ -299,6 +431,9 @@
     @ =======================================================================
 
     'uff' CRDIR uff
+    \<< HELP
+    \>> 'help' STO
+
     \<< UPDIR
       22.2 KEYEVAL
     \>> 'load' STO
