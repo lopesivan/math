@@ -1,0 +1,87 @@
+@ ============================================================================
+@ cir
+@ ============================================================================
+DIR
+  @
+  @ local functions
+  @
+
+  =delta-estrela=
+  \<< @ "Transformação Δ-Y (Triângulo-Estrela)"
+      3 DUPN
+      3 DUPN 3 DUPN 3 DUPN
+      + +
+      4 ROLLD
+      + +
+      5 ROLLD 5 ROLLD
+      + +
+      6 PICK 6 PICK
+      * SWAP /
+      6 ROLLD
+      4 ROLL
+      4 PICK
+      * SWAP /
+      4 ROLLD
+      3 ROLLD
+      * SWAP /
+      SWAP
+  \>>
+
+  =estrela-delta=
+  \<< @ "Transformação Y-Δ (Estrela-Triângulo)"
+      3 DUPN
+      3 DUPN
+      3 DUPN
+      * 4 ROLLD
+      * SWAP 4 ROLL
+      * + + DUP ROT
+      / SWAP ROT SWAP DUP 5 ROLL
+      / SWAP ROT
+      /
+      ROT
+  \>>
+
+  rp
+  \<< @ função resistência em paralelo
+      2 DUPN
+      INV SWAP INV + INV
+  \>>
+
+  dc
+  \<< @ função divisor de tensão
+      3 DUPN
+      DUP UNROT + / *
+  \>>
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   { + P}
+   dc
+   rp
+   =delta-estrela=
+   =estrela-delta=
+  }
+
+  load \<< Load \>>
+
+END 'cir' STO
+cir
+@UPDIR
+@ ============================================================================
+
+@ ============================================================================
+@ ->P
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   KMAP
+   p2
+  }
+
+  load \<< Load \>>
+
+END 'P' STO
+@ ============================================================================
+

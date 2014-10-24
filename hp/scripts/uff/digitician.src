@@ -1,0 +1,847 @@
+DIR
+  T.T.M.
+  ´ DEPTH
+    IF NOT
+    THEN
+"T.T.M. Error
+Must have STR"
+DOERR
+    END DUP TYPE
+    IF 2. ã
+    THEN
+"T.T.M. Error
+Must be a string"
+DOERR
+    END DUP DUP SIZE 0. DEPTH 3.
+- RCLF ç s n t d Flag
+    ´ 1. CF -2. CF -3. CF 1. n
+      FOR i s i DUP SUB DUP
+        IF ")" SAME
+        THEN DROP DUP SIZE 5. -
+1. SWAP SUB ")" 2. SF
+        END DUP
+        IF "(" SAME
+        THEN 1. SF "("
+        END DUP
+        IF "'" SAME
+        THEN 1. SF DROP " NOT "
+SWAP + "'"
+        END DUP
+        IF "+" SAME
+        THEN 1. SF DROP DUP SIZE
+5. - 1. SWAP SUB ") OR " + "("
+SWAP + "+"
+        END DUP
+        IF "*" SAME
+        THEN 1. SF DROP DUP SIZE
+5. - 1. SWAP SUB ") XOR (" + "+"
+        END DUP
+        IF " " SAME
+        THEN 1. SF
+        END
+        IF 1. FC?
+        THEN " AND " +
+          IF 2. FS?
+          THEN 2. CF
+            WHILE SWAP DUP "(" ã
+            REPEAT SWAP +
+            END SWAP +
+          END
+        ELSE 1. CF DROP
+        END
+      NEXT DUP SIZE 5. - 1. SWAP
+SUB DEPTH d - DUP
+      IF 1. ã
+      THEN 1. - 1. SWAP
+        START +
+        NEXT
+      ELSE DROP
+      END ")'" + "'(" SWAP +
+OBJç 'temp' DUP CRDIR EVAL STEQ
+'ST' STO 0. 15. { } { N M L K J
+I H G F E D C B A } ç t n an ls
+      ´
+        WHILE ST 64. n + CHR POS
+0. ==
+        REPEAT 'n' DECR DROP
+        END ls DUP SIZE DUP n 1.
+- - SWAP SUB 'ls' STO 0. 2. n ^
+1. -
+        FOR i i 't' STO n 1. -
+0.
+          FOR j ls j 1. + GET
+            IF t 2. j ^ ä
+            THEN 1. SWAP STO t
+2. j ^ - 't' STO
+            ELSE 0. SWAP STO
+            END -1.
+          STEP EQ EVAL
+          IF
+          THEN an i + 'an' STO
+          END
+        NEXT an ls PURGE Flag
+STOF
+      ª
+    ª CLVAR UPDIR 'temp' PURGE
+  ª
+  Q.M
+  DIR
+    GO
+    ´
+GROB 131 64 000000000000000000000000000000000000000000000000000000000000000000000C700000000000F0E100F230000600000006C00010000000A0A0081320000400000081C00000000000D05006031000020000008086CCCE1E1000984C3200913E52EC3760404244C890100844232108809039112120404244409F1008C42121088090050F311020212228400E3441908004488F858009006C312228400004419081844800988009006989111464000248C88132666848C88200CF17BB3EC300074C970F17CDC7EC97030008000000000000000000000000000080003800000000000000000000000000008000F3000000000000000000000000000840000000000000000000000000000000083000000000000000000000000000000000000000000000068100000080300000000000000000000006010000088020000000000000000000008680810000401000000000000000000000848878FCE6E3D3A7F00000000000000000224246CC4228136EC000000000000000002442428402280224800000000000000000F321214201140112400000000000000008062E114201140112400000000000000004021181318842880120000000000000000E0F3F1F93C137CD9370000000000000000000401000000000000000000000000000000040100000000000000000000000000000002800000000000000000000000000000000C700000000000000000000000000000000000000000000000000000000000000000000C7EC30000000000000000000000000000040154000000000000000000000000000004015400000000000000000000000000000C31D3000000000000000000000000000004015100000000000000000000000000000401520000000000000000000000000000040E44000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022000000080802000E30010021000000002100000008080200024001002000000000A06451329A28133A024645237992000000609CCA425B581B461249A5A425A5000000608442425A48A2421E3925A025A4000000A0E442725A48A272122F25A025A400000021944A425A48AA42124125A025A400000022944A4A5B484A461249A5B425A4000000246542B49A4842BA02464923699400000000000000020000020000000000000000000000000042000002000000000000000000000000008100000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000440000000000000000000000000000000045EEEE00000084A2847500000000000000C412480000004DA2821500000000000000C4DE44000000CD31817200000000000000459242000000453182120000000000000044EE4E0000004521847200000000000000830000000000000000000
+{ # 0h # 3Ah } "VERSION 0.9.1"
+1. çGROB REPL PICT STO { # 0h
+# 0h } PVIEW DATA CLVAR RCLF 'F'
+STO { } DUP DUP 'FINAL' STO
+'dont' STO 'ran' STO 1. 'dis'
+STO -40. CF -55. SF -49. CF -50.
+-2. CF -3. CF CF -56. CF 0. WAIT
+CLEAR
+"DEVELOPED ON HP-48 BY ROBIN GETZ"
+"" " START - START ALGORITHM"
+" DISP  - DISPLAY CUBES ON/OFF"
+" D     - DON'T CARE TERMS"
+" Ö - MINTERM  OR  ú - MAXTERM"
+"" "   DISTRIBUTED AS SHAREWARE"
+" QUINE - MCCLUSKEY ALGORITHM"
+STACK { { " Ö "
+      ´ CHLST " + " 'Sb' STO ""
+'St' STO 1. 'type' STO 'lÖ' STO
+menu 1. { } PUT 2. { } PUT DUP
+'menu' STO TMENU
+      ª } { " ú"
+      ´ CHLST ") (" 'Sb' STO "+"
+'St' STO 0. 'type' STO 'lÖ' STO
+menu 1. { } PUT 2. { } PUT DUP
+'menu' STO TMENU
+      ª } { " D"
+      ´ CHLST 'dont' STO menu 3.
+{ } PUT DUP 'menu' STO TMENU
+      ª } { "DISP"
+      ´ 0. 'dis' STO menu 4. dof
+PUT DUP 'menu' STO TMENU
+      ª } { "STARt"
+      ´ STARt
+      ª } { "QUIT"
+      ´ F STOF CLVAR UPDIR UPDIR
+CLEAR CST TMENU
+      ª } { "INFO"
+      ´
+"                         TO CONT"
+"                         ANY KEY"
+"        CANADA"
+"        S7H 5L7"
+"        SASKATOON, SASKATCHEWAN"
+"        203 TAIT PLACE"
+"        APT 310A"
+" ATTN : ROBIN GETZ"
+"PLEASE SEND $5.00 OR COMMENTS:"
+"IF YOU FIND THIS PROGRAM USEFUL"
+STACK { # 0h # 0h } PVIEW 0.
+WAIT DROP
+" WITH PROGRAM REGISTRATION"
+"PROGRAM DOCUMENTATION AVAILABLE"
+"" " ARE WELCOME"
+"ALL QUESTIONS AND COMMENTS" ""
+" 873398@BELL.USASK.CA"
+"OR E-MAIL AT:" STACK { # 0h
+# 0h } PVIEW 0. WAIT DROP
+      ª } } DUP 'menu' STO TMENU
+3. FREEZE
+    ª
+    STARt
+    ´ PICT PURGE 'lÖ' DUP EVAL
+SAME
+      IF
+      THEN
+"Error:
+Data must be entered"
+DOERR
+      END -52. SF 0. ç ab
+      ´ CLLCD
+"Initializing data " 2. DISP
+" checking input" 3. DISP lÖ
+init DUP 'lÖ' STO dont + init ç
+t
+        ´ { } t SIZE 1.
+          FOR q t q GET + -1.
+          STEP
+        ª { } DUP DUP 'Cn' STO
+'CnC' STO 'ANT' STO " / "
+maxVars çSTR + 'ab' STO 0.
+maxVars
+        FOR i i çSTR ab + 3.
+DISP "C" i çSTR + DUP "C" + OBJç
+CnC SWAP + 'CnC' STO OBJç DUP Cn
+SWAP + 'Cn' STO { } 0. maxVars i
+-
+          START { { } } +
+          NEXT SWAP STO
+        NEXT 0. ç Minsum st
+        ´ Minsum OBJç ç len
+          ´ CLLCD
+"Arranging 0 cubes" 2. DISP
+" / " len çSTR + 'st' STO 1. len
+            FOR i i çSTR st + 3.
+DISP DUP 0. ç nu z
+              ´ maxVars 1. - 0.
+                FOR j
+                  IF 2. j ^ nu â
+                  THEN 'z' INCR
+DROP nu 2. j ^ - 'nu' STO
+                  END -1.
+                STEP z
+              ª 1. + ç nu place
+              ´ C0. place GET
+C0. SWAP nu 1. çLIST 1. çLIST +
+place SWAP PUT 'C0.' STO
+              ª
+            NEXT
+          ª 0. covered 0. 0. ç a
+b
+          ´ 1. maxVars
+            FOR n CLLCD
+"  Displaying " n 1. - çSTR +
+" cube" + Cn n GET EVAL n 1. -
+çSTR " cube" + disp CLLCD
+"Arranging " n çSTR + " cubes" +
+2. DISP Cn n GET EVAL SIZE 1. -
+DUP çSTR " / " SWAP + 'a' STO 1.
+SWAP
+              FOR i i çSTR a +
+3. DISP Cn n GET EVAL i GET Cn n
+GET EVAL i 1. + GET ç c1 c2
+                ´
+                  IF c1 SIZE 0.
+ã c2 SIZE 0. ã AND
+                  THEN c1 SIZE
+DUP çSTR " / " SWAP + 'b' STO 1.
+SWAP
+                    FOR j j çSTR
+b + 4. DISP c2 SIZE 1. SWAP
+                      FOR k c1 j
+GET c2 k GET
+                        IF -1.
+0. ç d1 d2 z d
+                          ´
+                            IF
+d1 SIZE 1. ã
+                            THEN
+d1 OBJç 1. 2. çLIST çARRY d2
+OBJç 1. 2. çLIST çARRY - OBJç
+OBJç DROP DROP 1. - 1. SWAP
+START DUP2
+  IF ã
+  THEN -99. 'z' STO
+  END DROP
+NEXT DROP d1 OBJç 1. - 1. SWAP
+START DUP2
+  IF <
+  THEN SWAP
+  END DROP
+NEXT 'd1' STO d2 OBJç 1. - 1.
+SWAP
+START DUP2
+  IF <
+  THEN SWAP
+  END DROP
+NEXT 'd2' STO
+                            ELSE
+d1 OBJç DROP 'd1' STO d2 OBJç
+DROP 'd2' STO
+                            END
+                            IF z
+-99. ã
+                            THEN
+maxVars 0.
+FOR i
+  IF 2. i ^ d1 â
+  THEN i 'z' STO d1 2. i ^ -
+'d1' STO
+  END
+  IF 2. i ^ d2 â
+  THEN d2 2. i ^ - 'd2' STO
+    IF z i ==
+    THEN -1. 'z' STO
+    ELSE d 1. + 'd' STO
+    END
+  END
+  IF z -1. ã
+  THEN -1. 'z' STO d 1. + 'd'
+STO
+  END -1.
+STEP
+                            ELSE
+2. 'd' STO
+                            END
+                            IF d
+1. >
+                            THEN
+0.
+                            ELSE
+1.
+                            END
+                          ª
+                        THEN n j
+k i ç q x y t
+                          ´ CnC
+q GET DUP EVAL { t x } 1. PUT t
+1. + y 2. çLIST 1. PUT SWAP STO
+                          ª Cn n
+1. + GET EVAL i DUP2 GET c1 j
+GET c2 k GET + DUP SIZE { } ç t2
+t1 sz TEMP
+                          ´ 1.
+sz
+                            FOR
+m 1. sz 1. -
+FOR n t1 n GET t1 n 1. + GET
+  IF >
+  THEN t1 DUP n GET t1 n 1. +
+GET 'TEMP' STO n 1. + SWAP PUT n
+TEMP PUT 't1' STO
+  END
+NEXT
+                            NEXT
+0. 'TEMP' STO t2 SIZE DUP
+                            IF
+0. ==
+                            THEN
+DROP
+                            ELSE
+1. SWAP
+FOR p t2 p GET t1
+  IF ==
+  THEN 1. 'TEMP' STO
+  END
+NEXT
+                            END
+                            IF
+TEMP
+                            THEN
+DROP
+                            ELSE
+t2 t1 1. çLIST + PUT
+                            END
+                          ª Cn n
+1. + GET STO
+                        END
+                      NEXT
+                    NEXT
+                  END
+                ª
+              NEXT n covered
+            NEXT
+          ª CLLCD
+"Compiling Prime" 2. DISP
+"  Implicant Table" 3. DISP
+maxVars 1. + 1.
+          FOR i "Check " i çSTR
++ " cube" + 5. DISP Cn i GET
+EVAL CnC i GET DUP
+            IF VTYPE -1. ==
+            THEN DROP DROP
+            ELSE EVAL ç n m
+              ´ n SIZE 1. SWAP
+                FOR i n i GET ç
+p
+                  ´ p SIZE DUP
+                    IF 0. ã
+                    THEN 1. SWAP
+                      FOR j m {
+i j } GET
+                        IF NOT
+                        THEN p j
+GET 1. çLIST ANT SWAP + 'ANT'
+STO
+                        END
+                      NEXT
+                    ELSE DROP
+                    END
+                  ª
+                NEXT
+              ª
+            END -1.
+          STEP Cn CnC + PURGE
+CLLCD "Displaying PIT" ANT 1.
+çLIST "PIT" disp RIT EPI 2. POS
+          IF 0. ã
+          THEN { } DUP 'rpit'
+STO 'rans' STO CLLCD
+"Reduced PIT required" 2. DISP
+" finding RPIT" 3. DISP RPALG
+CLLCD
+            IF dis
+            THEN
+"Displaying Reduced" 1. DISP
+" Prime Implicant Table" 2. DISP
+"Top:" 4. DISP rpit çSTR DUP
+SIZE ç s n
+              ´ 0. n 20. / IP
+                FOR i s i 20. *
+DUP 19. + SUB 31. CHR + i 5. +
+DISP
+                NEXT n 20. / IP
+DUP 20. * s SWAP n SUB SWAP 5. +
+DISP
+              ª 0. WAIT DROP
+"Displaying RPIT" rans 1. çLIST
+"RPIT" disp
+            END CLLCD
+" Solving RPIT with
+  an iterative
+  procedure"
+3. DISP lÖ 'OlÖ' STO ANT 'OANT'
+STO pit 'Opit' STO { } 'Dpit'
+STO
+            DO CLLCD
+" Compiling reduced
+  data ..."
+3. DISP { } DUP 'Tpit' STO 'ra'
+STO 0. ç t
+              ´ 1. OANT SIZE
+                FOR a Opit a POS
+0. == Dpit a POS 0. == XOR
+                  IF NOT
+                  THEN { } 't'
+STO OANT a GET DUP SIZE 1. SWAP
+                    FOR b DUP b
+GET DUP rpit SWAP POS
+                      IF 0. ã
+                      THEN t
+SWAP + 't' STO
+                      ELSE DROP
+                      END
+                    NEXT DROP
+                    IF { } t ã
+                    THEN ra SIZE
+                      IF 0. ã
+                      THEN 1. ra
+SIZE
+                        FOR c
+-4. CF ra c GET 1. t SIZE
+                          FOR d
+DUP t d GET POS
+                            IF
+0. ã
+                            THEN
+-4. SF
+                            ELSE
+99. 'd' STO -4. CF
+                            END
+                          NEXT
+                          IF -4.
+FS?
+                          THEN
+99. 'c' STO
+                          END
+DROP
+                        NEXT
+                      END
+                    ELSE -4. SF
+                    END
+                    IF -4. FC?
+                    THEN ra t 1.
+çLIST + 'ra' STO Tpit a + 'Tpit'
+STO
+                      IF ra SIZE
+1. >
+                      THEN 1. ra
+SIZE 1. -
+                        FOR e
+-4. CF ra e GET DUP SIZE 1. SWAP
+                          FOR d
+DUP t SWAP d GET POS
+                            IF
+0. ã
+                            THEN
+-4. SF
+                            ELSE
+99. 'd' STO -4. CF
+                            END
+                          NEXT
+                          IF -4.
+FS?
+                          THEN
+-4. CF ra e { } PUT 'ra' STO
+Tpit DUP SIZE e + ra SIZE - GETI
+Dpit SWAP + 'Dpit' STO 1. - -1.
+PUT 'Tpit' STO
+                          END
+DROP
+                        NEXT
+                        WHILE ra
+{ } POS
+                        REPEAT
+                          IF ra
+{ } POS DUP 1. ã
+                          THEN
+1. - 1.
+                            FOR
+d ra d GETI PUT 'ra' STO -1.
+                            STEP
+                          ELSE
+DROP
+                          END ra
+OBJç 1. - çLIST SWAP DROP 'ra'
+STO
+                        END
+                        WHILE
+Tpit -1. POS
+                        REPEAT
+                          IF
+Tpit -1. POS DUP 1. ã
+                          THEN
+1. - 1.
+                            FOR
+d Tpit d GETI PUT 'Tpit' STO -1.
+                            STEP
+                          ELSE
+DROP
+                          END
+Tpit OBJç 1. - çLIST SWAP DROP
+'Tpit' STO
+                        END
+                      END
+                    ELSE -4. CF
+Dpit a + 'Dpit' STO
+                    END
+                  END
+                NEXT
+              ª rpit 'lÖ' STO ra
+'ANT' STO { } DUP 'rpit' STO
+'rans' STO RIT RPALG pit SIZE
+              IF 0. ã
+              THEN 1. pit SIZE
+                FOR z Tpit pit z
+GET GET Opit + 'Opit' STO
+                NEXT
+              END
+            UNTIL EPI 2. POS 0.
+== tEPI EPI SAME OR EPI 'tEPI'
+STO
+            END
+            IF EPI 2. POS 0. ã
+            THEN { } 'Dtpit' STO
+OANT SIZE 1.
+              FOR x
+                IF Dpit Opit + x
+POS NOT
+                THEN OANT x GET
+ç f
+                  ´ x Dtpit +
+'Dtpit' STO x çSTR
+                    IF x 10. <
+                    THEN " "
+SWAP +
+                    END " °" +
+1. rpit SIZE
+                    FOR y rpit y
+GET f SWAP POS
+                      IF 0. ==
+                      THEN "   "
+                      ELSE " X "
+                      END +
+                    NEXT
+                  ª
+                END -1.
+              STEP "   ° " 1.
+rpit SIZE
+              FOR x rpit x GET
+DUP çSTR SWAP
+                IF 10. <
+                THEN " " +
+                END " " + +
+              NEXT STACK { # 0h
+# 6h } { # 82h # 6h } LINE {
+# 0h # 0h } PVIEW
+              WHILE 0. 0. ç k n
+                ´ PICT { # 0h
+# 0h } # Ch # 6h BLANK REPL
+                  DO 0. WAIT IP
+'k' STO
+                    IF k 51. ã
+                    THEN
+                      IF k 92. ã
+                      THEN k 10.
+/ IP 8. - ABS 3. * k 10. / FP
+10. * 1. - +
+                      ELSE 0.
+                      END 10. n
+* + 'n' STO PICT { # 0h # 0h } n
+1. çGROB REPL
+                    END
+                  UNTIL k 51. ==
+                  END n
+                ª DUP 0. ã
+              REPEAT ç n
+                ´
+                  IF Dtpit n POS
+DUP 0. ã
+                  THEN 6. * 2. +
+RçB # 11h SWAP 2. çLIST PICT
+SWAP # 73h # 4h BLANK REPL OANT
+n GET DUP SIZE 1. SWAP
+                    FOR z DUP z
+GET rpit SWAP POS DUP
+                      IF 0. ã
+                      THEN 12. *
+5. + RçB # 8h 2. çLIST PICT SWAP
+# 4h # 37h BLANK REPL
+                      ELSE DROP
+                      END
+                    NEXT DROP
+Opit n + 'Opit' STO
+                  ELSE DROP
+                  END
+                ª
+              END DROP TEXT
+            END Opit 'pit' STO
+OANT 'ANT' STO
+          END CLLCD
+"Compiling final data" 2. DISP
+pit ran + init DUP SIZE 1. SWAP
+          FOR y DUP y GET ANT
+SWAP GET 1. çLIST FINAL SWAP +
+'FINAL' STO
+          NEXT FINAL "" ç an st
+          ´ an SIZE 1. SWAP
+            FOR y an y GET 1.
+maxVars
+              START 0.
+              NEXT maxVars çLIST
+0. ç l z nu
+              ´ l SIZE 1. SWAP
+                FOR j l j GET
+'nu' STO maxVars 1. - 0.
+                  FOR i
+                    IF 2. i ^ nu
+â
+                    THEN nu 2. i
+^ - 'nu' STO
+                      IF z i 1.
++ GET DUP 0. == SWAP "X" == OR j
+1. ã AND
+                      THEN z i
+1. + "X" PUT 'z' STO
+                      ELSE z i
+1. + 1. PUT 'z' STO
+                      END
+                    END -1.
+                  STEP
+                NEXT "" 'l' STO
+maxVars 1.
+                FOR i z i GET
+DUP
+                  IF "X" ã
+                  THEN maxVars i
+- 65. + CHR SWAP
+                    IF type XOR
+                    THEN "'" +
+                    END St + l
+SWAP + 'l' STO
+                  ELSE DROP
+                  END -1.
+                STEP l
+                IF type NOT
+                THEN DUP SIZE 1.
+- 1. SWAP SUB
+                END
+              ª st SWAP + Sb +
+'st' STO
+            NEXT st DUP SIZE 3.
+- 1. SWAP SUB
+          ª
+        ª F STOF CLVAR UPDIR CST
+TMENU
+      ª
+    ª
+    DATA
+    DIR
+    END
+    CHLST
+    ´ DUP
+      IF TYPE 5. ã
+      THEN
+"Error:
+         Must be a list {}"
+DOERR
+      END
+    ª
+    RIT
+    ´ CLLCD
+"Checking for Reduced" 1. DISP
+" Prime Implicant Table" 2. DISP
+{ } 'pit' STO lÖ SIZE 0. ç x epi
+      ´ 1. x
+        START 2.
+        NEXT x çLIST DUP 'epi'
+STO 'EPI' STO 1. ANT SIZE
+        FOR i ANT i GET DUP SIZE
+1. SWAP
+          FOR j DUP j GET lÖ
+SWAP POS DUP
+            IF 0. ã
+            THEN epi SWAP DUP2
+GET 1. - PUT 'epi' STO
+            ELSE DROP
+            END
+          NEXT DROP
+        NEXT
+        WHILE epi 1. POS 0. ã
+        REPEAT epi 1. POS ç p
+          ´ epi p 0. PUT 'epi'
+STO EPI p 1. PUT 'EPI' STO lÖ p
+GET ç a
+            ´ 1. ANT SIZE
+              FOR u ANT u GET a
+POS
+                IF 0. ã
+                THEN pit u +
+'pit' STO ANT u GET DUP 1. SWAP
+SIZE
+                  FOR b DUP b
+GET lÖ SWAP POS DUP
+                    IF 0. ã
+                    THEN DUP epi
+SWAP 0. PUT 'epi' STO EPI SWAP
+1. PUT 'EPI' STO
+                    ELSE DROP
+                    END
+                  NEXT DROP
+                END
+              NEXT
+            ª
+          ª
+        END
+      ª
+    ª
+    RPALG
+    ´ 1. EPI SIZE
+      FOR r EPI r GET
+        IF 2. ==
+        THEN rpit lÖ r GET +
+'rpit' STO
+        END
+      NEXT 1. ANT SIZE
+      FOR r pit r POS
+        IF 0. ==
+        THEN rans ANT r GET 1.
+çLIST + 'rans' STO
+        END
+      NEXT
+    ª
+    STACK
+    ´ 1. SF 0. ç x
+      ´ ERASE 0. 64.
+        FOR X
+          IF DEPTH 0. ã
+          THEN 'x' INCR DROP 1.
+çGROB PICT SWAP # 0h X
+            IF 1. FS?
+            THEN 1. CF
+            ELSE 2. +
+            END RçB 2. çLIST
+SWAP GXOR
+          END 6.
+        STEP 1. CF
+      ª
+    ª
+    covered
+    ´ 0. 0. 0. ç n l b j
+      ´ CLLCD
+"Constructing covered" 2. DISP
+" matrix for " n çSTR + " cube"
++ 3. DISP "C" n çSTR + OBJç ç l
+        ´ l SIZE DUP 1. SWAP
+          FOR i l i GET SIZE DUP
+            IF b >
+            THEN 'b' STO
+            ELSE DROP
+            END
+          NEXT
+          IF b 0. ã
+          THEN 'j' STO j b * 1.
+SWAP
+            START 0.
+            NEXT { j b } çARRY
+"C" n çSTR + "C" + OBJç STO
+          ELSE DROP
+          END
+        ª
+      ª
+    ª
+    disp
+    ´ ROT SWAP
+      IF dis
+      THEN "{ " SWAP +
+" - - - - - - " + 1. 16. SUB
+" }" + 0. ç di kk
+        ´ 1. DISP 1. WAIT DUP
+SIZE 1. SWAP
+          FOR ii DUP ii GET DUP
+SIZE DUP
+            IF 0. ã
+            THEN CLLCD di 1.
+DISP 1. SWAP 1. 'kk' STO
+              FOR jj DUP jj GET
+çSTR 'kk' INCR DISP
+                IF kk 6. ==
+                THEN 0. WAIT
+DROP 0. 'kk' STO CLLCD
+                END
+              NEXT DROP di 'kk'
+INCR DISP 0. WAIT DROP
+            ELSE DROP DROP
+            END
+          NEXT DROP
+        ª
+      ELSE DROP DROP DROP
+      END
+    ª
+    dof { " DISP"
+    ´ 1. 'dis' STO menu 4. don
+PUT DUP 'menu' STO TMENU
+    ª }
+    don { "DISP"
+    ´ 0. 'dis' STO menu 4. dof
+PUT DUP 'menu' STO TMENU
+    ª }
+    init
+    ´ DUP SIZE { } ç t1 sz TEMP
+      ´
+        IF sz 1. ã
+        THEN 1. sz
+          FOR m 1. sz 1. -
+            FOR n t1 n GET t1 n
+1. + GET
+              IF >
+              THEN t1 DUP n GET
+t1 n 1. + GET 'TEMP' STO n 1. +
+SWAP PUT n TEMP PUT 't1' STO
+              END
+            NEXT
+          NEXT
+        END t1 'maxVars' VTYPE
+        IF -1. ==
+        THEN t1 DUP SIZE GET ç u
+          ´ 0. 'TEMP' STO 10. 1.
+            FOR i u 2. i ^
+              IF ä TEMP NOT AND
+              THEN i 1. +
+'maxVars' STO 1. 'TEMP' STO
+              END -1.
+            STEP
+          ª
+        END
+      ª
+    ª
+  END
+  CST { { "Q.M"
+  ´ Q.M GO
+  ª } { "T.T.M."
+  ´ T.T.M.
+  ª } { "HOME"
+  ´ HOME VARS TMENU
+  ª } }
+END

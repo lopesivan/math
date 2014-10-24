@@ -1,0 +1,409 @@
+
+                        Digitician
+                         for the 
+                         HP-48SX
+
+                  Copyright Robin Getz 
+                      Feb 01, 1992
+
+                     Distributed by
+               Creative Software Concepts
+
+Date:      Feb 01, 1992
+Programs : Quine-McCluskey     (version 0.9.1)
+           Truth Table Maker   (version 0.9.1)
+
+Digitician is a combination of two programs that, used together can make life  much easier for anyone who must deal with digital logic problems.  The first program performs reductions of Karnaugh maps by Quine-McCluskey's method (modified).  The second gives a truth table from any type of boolean expression.  This combination of programs when used properly can provide a very useful tool, allowing more time to be spent on less iterative processes such as digital design and state machines.
+
+Note:  These programs preform a modified Quine - McCluskey Algorithm for Karnaugh Map Reduction and produce truth tables from boolean expressions.  This document does not explain how to do Quine-McCluskey,  or the theory behind truth tables or any of the algorithms used.  With program registration full documentation explaining where the difference between the classical algorithms and the one implemented will be mailed to you (see program registration).  It is assumed in this document that you have taken or are in the process of taking an introductory course in digital logic and are familiar with logic minimization.
+
+
+Contents
+
+Loading Digitician into your calculator.............2
+Karnaugh Map reduction..............................2
+Selecting the programs..............................3
+Running the Quine-McCluskey Program.................3
+Quine-McCluskey example.............................3
+Truth Table Maker...................................5
+T.T.M Examples......................................5
+Using Both Programs.................................5
+Ordering & Distribution Information.................7
+References and a Note to Educators..................8
+Copyright, Disclaimer and bug reports...............9
+Digitician Order Form...............................10
+
+Loading Digitician into your calculator
+
+Digitician can be loaded into you calculator in various ways: 
+    1) From someone else's calculator - direct head to head (IR) binary transfer.
+    2) From computer disk  or BBS - On disk will be in one of three formats
+      a) ASC format      - must load into calculator and run ASCç
+      b) Binary Format  - must load into calculator as binary
+      c) ASCII Format   - must load into calculator as ASCII
+
+To download from a computer a serial interface is needed.  Depending on what type of platform you are running, on it can be relatively cheap to make your own, or you can purchase a cable directly form Hewlett Packard.  Look in References to find this information.
+
+The Checksum is # 2091h, (# 8337d; # 20221o ; # 10000010010001b) and the bytes are 13983 (of the directory)
+
+
+Karnaugh Map Reduction
+
+The Quine-McCluskey Algorithm for Karnaugh map reduction used in Digitician uses a specific syntax for all data that is to be entered.  All data must be in list format (i.e. in {} brackets)  Every cube in the Karnaugh map that has a 1 (one) it in will have the position of that cube entered in  the list in decimal form.  (Depending on what type of output you require you may have to enter the cubes that have the 0 (zero) in them.)
+
+Example
+
+ABCD| 00 | 01 | 11 | 10 |   One Terms        Don't Care Terms
+----|----|----|----|----|   Binary   Decimal  Binary  Decimal
+  00|  1 |  1 |    |  X |   ABCD              ABCD
+  --|----|----|----|----|   0000     0        1000      8
+  01|  1 |  1 |    |    |   0001     1        1011      11
+  --|----|----|----|----|   0100     4
+  11|    |  1 |    |  X |   0110     6
+  --|----|----|----|----|   0111     7
+  10|    |  1 |  1 |  1 |   0101     5
+  --|----|----|----|----|   1110     14
+                            1010     10
+
+Therefore the list that would be used to express the minterms is {0 1 4 6 7 5 14 10}, and the list used to express the don't care terms is {8 11}.  It does not matter the order of the list that is used.  The program will sort the list the way it wants.  However the program does not check to see if any numbers are duplicated, or if you have input the same number in the one terms and the don't care terms; (since this never happens in an actual question, error checking of this type would only make the algorithm more time consuming).  If this is done the program will crash.
+
+
+Selecting the programs
+
+To select the program go into the DIGITAL directory and press the CST key This will give you three choices, to run the Quine-McCluskey Program (Q.M), to run the Truth-Table program (T.T.M) or to return home (HOME).
+
+
+Running the Quine - McCluskey Program
+
+After pressing Q.M a title screen will appear.  This will tell you the version number of the program you are using.  During this time the program sets up some initial variables and sets some flags so that everything is set up when you would like to run the program.  To exit this press, any key with the exception of the ON key, (this will break the program, and leave you with the flags set the way Digitician likes them.)
+
+The next screen will appear.  This gives the menu choices of Ö, ú , D, DISP, START, QUIT.  If you would like a sum of products (Minterm) the Ö key is used;  For a product of sums (Maxterm), the ú key is used.  D is used for all your don't care terms, DISP is used to toggle the display capabilities of the program.  If you would like to see all of the steps (the 0 cubes, the 1 cubes, ... the Prime Implement Table (PIT), the Reduced Prime Implement Table (RPIT), the Essential Prime Implements, The Secondary Prime Implements) the display feature should be on, if you just want the answer, turn the display feature off and let the program crunch through.  START will start the program running and QUIT will quit out of the program, resetting the flags the way you like them.  That is all there is to it.  For more information about this program press the NXT key and INFO.
+
+Example #1
+
+m(1 4 7 14 17 20 21 22 23) + d(0 3 6 19 30)
+
+To complete this problem we do the following:
+
+1: {1 4 7 14 17 20 21 22 23 }    | you type this
+Ö                                | Maxterm
+1: {0 3 6 19 30 }                | you type this
+D                                | Don't Care terms
+START                            | Start program
+
+The program will tell you what it is doing while it is doing it.  The first thing it does is Initializing data.  The n/5  says there maximum number in the list is 2^5 (32), the actual maximum number is 30 and n/14 says there are 14 number that are being crunched through (the number of maxterms(9) plus the number of don't care terms(5)).  This is a quick way to check to see if you have typed any of the numbers incorrectly.
+
+To see the output, wait and then press any key (except ON) to continue when you are finished looking at the answer or writing it down.
+
+It is recommended that you go through this example to see how the program outputs the answers.
+The output is:
+
+0 cubes| 1 cubes | 2 cube    | 3 cube |
+-------|---------|-----------|--------|
+0      |0 1      | 1  3 17 19|  NONE  |
+-------|0 4      | 4  6 20 22|
+1      |---------|-----------|  
+4      |1 3      | 3  7 19 23|
+-------|1 17     | 6  7 22 23|
+3      |4 6      | 6 14 22 30|
+6      |4 20     |17 19 21 23|
+17     |---------|20 21 22 23|
+20     |3 7      |-----------|
+-------|3 19     |
+7      |6 7      |
+14     |6 14     |
+19     |6 22     |
+21     |17 19    |
+22     |17 21    |
+-------|20 21    |
+23     |20 22    |
+30     |---------|
+-------|7 23     |
+       |14 30    |
+       |19 23    |
+       |21 23    |
+       |22 23    |
+       |22 30    |
+       |---------|
+
+PIT         |  1  4  7 14 17 20 21 22 23
+------------|---------------------------
+ 1  3 17 19 |                           
+ 4  6 20 22 |                           
+ 3  7 19 23 |                           
+ 6  7 22 23 |                           
+ 6 14 22 30 |                           
+17 19 21 23 |                           
+20 21 22 23 |                           
+------------|---------------------------
+ 0  1       |                           
+ 0  4       |                           
+------------|---------------------------
+
+
+Reduced PIT |  1  4  7 17 20 21 23
+------------|--------------------- 
+ 1  3 17 19 |
+ 4  6 20 22 |
+ 3  7 19 23 |
+ 6  7 22 23 |
+17 19 21 23 |
+20 21 22 23 |
+------------|---------------------
+0 1         |
+0 4         |
+------------|---------------------
+
+
+2: { 1 2 3 5 6}
+1: "B'C'E + B'CE' +B'DE + CDE' + AB'E"
+
+The program leaves the PIT and the RPIT for you to fill in by yourself.  It  fills them in, but does not output this information.
+
+The list of {1 2 3 5 6} is the rows of the PIT which are used to make the final expression (i.e. the first number in the list 1, corresponds to the first row in the PIT, {1 3 17 19} which corresponds to B'C'E in the answer; The fifth number in the list, 6 corresponds to the sixth row in the PIT, {17 19 21 23} which corresponds to AB'E in the answer ).  B'C'E + B'CE' +B'DE + CDE' + AB'E is the answer to the question.
+
+It takes about 4 min 30 sec for the calculator to complete this question..  Presently, version 1.0 is being worked on, a faster and smaller version of the algorithm (in machine code).  The amount of work it receives will depend upon how many people register their programs.  Keep a eye open for it.
+
+Example #2
+
+M(1 3 5 7 9 10 23 30 31 40 45 50 51 54 60) + d(0 2 11 16 15 32 33 34 59 63)
+
+GO
+1: {1 3 5 7 9 10 23 30 31 40 45 50 51 54 60}
+ú                                      |Maxterm
+1: {0 2 11 16 15 32 33 34 59 63}
+D                                      |Don't care terms
+DISP                                   |Toggle Display Off
+START                                  |Start
+
+
+2: {4 5 6 8 10 12 13 14 18 19}
+1: "A+B+C+F') (A+B+D+F') (A+B+D+E') (A+D'+E'+F') (A'+B+D+E+F) (A'+B'+C+D+E') (A'+B'+C+E'+F) (A+B'+C'+D'+E') (A'+B+C'+D'+E+F') (A'+B'+C'+D'+E+F"
+
+This takes about 8 minutes to complete
+
+Notes  :This implementation of the Quine-McCluskey Algorithm sacrifices program memory and speed for low run time memory.  This implementation does not require much more memory to run than the program takes up (the program takes about 13K to store and about another 4K to run with an average size question).  The maximum amount of numbers one can input is limited by available memory.  A stripped down version of this algorithm is available.  It takes about 8K, and uses the same amount of memory to run, but there are no options nor instructions.  This version is only available with program registration.
+
+Truth Table Maker
+
+From the main Digitician menu, input any boolean expression in string format and press T.T.M.;  The program returns a list of numbers where the truth table would be 1(one).  This can be useful to do boolean algebra, to find out whether or not two expressions are equal or not, or anywhere where you are given a long boolean expression and you would like to know the truth table for it.
+
+Syntax
+Any number of combinations of brackets and NOTs are allowed.  A is always the most significant bit, B is the 2nd and so on.  The syntax used is an AND is always assumed between two literals or brackets unless there is an OR or  XOR.  The boolean expression is entered in a string format ("..." double quotes).
+
+Boolean Expression  T.T.M equivalent     Answer
+NOT(A)              A'                   {0}
+A AND B             AB                   {3}
+A OR B              A+B                  {1 2 3}
+A XOR B             A*B                  {1 2}
+NOT(NOT(A))         (A')'                {1}
+(AB) OR A           AB+A                 {2 3}
+(A OR B) AND A      (A+B)A               {2 3}
+
+Examples : 
+
+1: "B'C'E+B'CE'+B'DE+CDE'+AB'E"
+T.T.M
+1: {1 3 4 6 7 14 17 19 20 21 22 23 30}
+
+We can see from the Quine McCluskey example that this correct.
+
+1: "(AB'+CB')'A"
+T.T.M
+1: { 6 7 }
+
+1: "(((A+B)'+B)'+A')'"
+T.T.M
+1: { 3 }
+
+This can be useful to do boolean algebra in order to see if two expressions are the same, to do boolean reduction and a host of other things.
+
+True / False
+(AB' + AB) = A
+
+1: "(AB'+AB)"
+T.T.M
+1: {2 3 }
+
+1: "A"
+T.T.M 
+1: {1}
+
+By this, one may say that the two are not equal, but by looking closely we can realize what we did wrong.  On the right side, A is the least significant bit, and on the left side A is the most significant bit, as can be seen by examining the truth table,
+
+#  A  B F()
+0  0  0  0
+1  0  1  0
+2  1  0  1
+3  1  1  1
+
+It does not matter whether B is 1 or 0.  The F() is simply A, which means that the two expressions are equal and the statement is true.
+
+1: "BC"
+T.T.M
+1: {3 7}
+
+Looking at the truth table, we can see why this is.
+
+#  A  B  C F()
+3  0  1  1  1
+7  1  1  1  1
+
+Since A is not in the equation, but still is a place holder A can either be 0 or 1 hence the F() can be 3 or 7.
+
+Note: the Truth Table Maker has a software limitation of 14 variables.  (i.e. A through N, the highest number you can get is 32767.  If this proves a limitation for your use, contact Creative Software Concepts and we will increase it.)
+
+Using both programs together
+
+The combination of programs can be used for various things, for example:
+
+Minimize the expression:
+(((A+B)B'C+AB)')D'
+
+1: "(((A+B)B'C+AB)')D'"
+T.T.M
+1: {0 2 4 6 8}
+Q.M
+{0 2 4 6 8}
+Ö
+DISP
+START
+2:{1 2}
+1:"A'D' + B'C'D'"
+
+Factor out D' and we get: D'(A'+B'C')
+
+CHECK:
+1: "D'(A'+B'C')"
+T.T.M
+1: {0 2 4 6 8}
+
+
+Ordering information
+
+This offer is limited, and may be withdrawn at any time.
+
+Digitician may be used for 15 days without charge. After 15 days, you must order Digitician, destroy your copy or give it to a friend.  In order to keep other low cost quality software coming your way, please register your copy.  To order, print the order form found at the bottom of this document, and send with $5 plus shipping and handling ($3 Canada, $5 international) to:
+
+Creative Software Concepts
+c/o Robin Getz
+    Apt 310A
+    203 Tait Place
+    Saskatoon, Saskatchewan
+    S7H 5L7
+    Canada
+
+Internet : 873398@booth.usask.ca
+
+With registration, you will receive a package containing:
+
+o The latest version release.
+o The stripped version of the Quine-McCluskey Algorithm
+o A description of the algorithms used.
+o Printed documentation (nicely formatted).
+o Notice when new versions become available.
+
+Official releases and upgrades may be downloaded from the HP BBS (Internet HPCVBBS.CV.HP.COM or Phone : (503) 750-4448 (2400/1200/300 baud, full duplex, no parity, 8 bits, 1 stop bit.) or found at various HP ftp site worldwide.  For the most up to date copy , register.
+
+Distribution
+
+Digitician  is a “shareware” program. Shareware offers the opportunity to try out a fully-functional copy of a program before purchase. Although Digitician is freely available, it is a copyrighted program, and use or distribution in violation of the License Agreement and Distribution guidelines is against the law.
+
+You may give copies of Digitician to your friends for evaluation. Digitician may be placed on BBSes and on-line service providers (such as Compuserve, GEnie and America Online) provided that the Digitician package is downloadable without charge beyond normal connect charges. Digitician may be placed onto diskettes distributed by user groups at a nominal fee.
+
+When distributing Digitician, please give the complete contents of the disk, or the two files (Digitician and Digitician-doc), making sure that all note files are transferred as well.
+
+Vendors desiring to place Digitician into their catalogs must contact the author at the address on the cover requesting permission to distribute this program, and outlining their fees and shareware policies.
+
+Whenever Digitician appears on a catalog, diskette, BBS, or on-line service, it must be identified as shareware. Vendors and operators must make it clear that on-line charges or disk fees have not paid for the use of this shareware product, and that additional payment is due the author.
+
+Digitician is currently available only on the HP-48SX, but in order for ease of data transfer, is available as a text file in numerous formats (Macintosh, IBM, Amiga, Unix, - please specify which platform you would like your diskette to be formatted with when you order).
+
+References and a note to Educators
+
+These programs were designed specifically for use in engineering university classes that deal with digital logic. They were designed to be used as tools only.  These programs were made in order so that you do not have to spend a lot of time doing these iterative procedures, something a computer does much more accurately anyway.  They should be used to free up time in order for you to do other more intellectual things, like discussing state machines, spending time on design, or computer simulation.  Just as the calculator was a step-up from the slide rule, these programs should be a step-up from a normal calculator, and not banned from classes and exams.  However if these programs are allowed, one should not ask a Quine-McCluskey question on an exam.
+
+Webster's defines 'engineering' as : The application of mathematical and scientific principles and tools to practical ends, as the design, construction, and operation of economical and efficient structures, equipment and systems.  The Digitician is just a tool to use, one that should be allowed in educational settings, just as it will be allowed in the work force (when would an employer say "No, you can't use that, it would save too much time")?
+
+References
+All of the theory for these programs can be found in most good digital logic textbooks.  The one I used was 
+
+Wakerly, John F. Digital Design Principles and Practices, Prentice Hall, Englewood Cliffs, New Jersey, 1990
+
+was well as class notes from
+
+EE310.3	Digital Systems I.
+
+held at University of Saskatchewan, College of Engineering.
+
+References on the HP 48SX can be found in:
+
+HP 48SX Scientific Expandable Owner Manual Volume 1 and 2, Hewlett-Packard Company, Corvallis Division. (Mfg No. 00048-90077)
+
+Copyright, Disclaimer and bug reports
+
+Please report bugs or suggestions to Creative Software Concepts, at the address below, or on Internet at 873398@booth.usask.ca .  When you report the problem please give us the question that the program was crunching though at the time when the crash occurs.
+
+Please note that all possible human efforts have been made to ensure the contents of this manual and The Digitician are correct and work properly but, I am only human ... therefore, neither Creative Software Concepts or Robin L. Getz makes any expressed or implied warranties as to the contents of this manual or accompanying software and specifically disclaims any warranties of merchantability or fitness for any particular purpose.  Creative Software Concepts or Robin L. Getz further reserves the right to make changes to the specifications of the program and contents of the manual without obligation to notify any person or organization of such changes.   These programs are made available soley on an "as is" basis, and the entire risk as to their quality and performance is with the user.  Creative Software Concepts or Robin L. Getz cannot be help responsible or liable for data loss, wrong answers, your calculator exploding, or thermal nuclear war in connection with the furnishing, performance, or use if this manual or the examples herein.  Should these examples or programs described within prove defective, the user (and not Creative Software Concepts or Robin L. Getz , nor any other party) shall bear the entire cost of all necessary correction and all incidental or consequential damages in connection with, or arising out of, the furnishing, use, or performance of these programs.  (Hopefully that will cover everything)
+
+This software package and manual are copyright 1992 by Robin L. Getz.  All rights reserved, worldwide.  Under copyright laws of Canada and the laws of other countries, neither this manual nor the software may be copied, in whole or in part, without the written consent of Robin L. Getz, other than for backup protection or for distribution as shareware.  Under the law, copying includes translating into another language or format.
+
+Version / Fixes
+
+05Jan92 ver 0.9  released as user RPL algorithm, promises of system RPL soon.
+
+10Jan92 ver 0.9.1 released in user RPL, to fix one bug in Quine-McCluskey (DISP feature did not work properly) and fix one bug in T.T.M (did not handle brackets properly).
+
+
+                   Digitician Order Form
+
+Name _______________________________________________________
+
+Company : __________________________________________________
+
+Address : __________________________________________________
+
+City : ____________________  Province/State: _______________
+
+Postal / Zip Code : ___________  Country: __________________
+
+Phone: (optional) : ________________________________________
+
+Email Addresses (optional) : _______________________________
+
+____________________________________________________________
+
+How did you hear about Digitician? : _______________________
+
+____________________________________________________________
+
+Platform(circle one)  Mac    MS-DOS     Unix    Amiga 
+                      Other _________
+
+Disks (circle one) : 3.5"     5.25"
+
+Digitician 1.0 Package      Price $5.00   S&H -$3.00 - Canada
+  includes:                                   -$5.00 - Other
+   o Regisration
+   o Latest version on diskette 
+   o Printed program documentation 
+   o Printed algorithm description 
+
+
+Remember, no GST or taxes
+
+Forms of Payment : Check or money order made out to Robin L. 
+Getz
+
+Send order to:
+    Robin L. Getz
+    Apt. 310A
+    203 Tait Place
+    Saskatoon, Saskatchewan
+    S7H 5L7
+    Canada
+ 
+
+
+Allow 4 - 6 weeks for delivery
+                                                                                                                                                                                                                                                                     

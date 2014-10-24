@@ -81,7 +81,8 @@
         'C' CRDIR C
             {{\|^ up}
             {op \<< 44.2 KEYEVAL 33.2 KEYEVAL  13.1 KEYEVAL \>> }
-             S\->C
+            S\->C
+            R\->C
             =XYZ-POLAR= =DEG-RAD= }
             'CST' STO
         UPDIR
@@ -431,6 +432,11 @@
     @ =======================================================================
 
     'uff' CRDIR uff
+    \<<
+        R\->C 3 ROLLD R\->C DROITE
+        \->Q
+    \>> 'R2' STO
+
     \<< HELP
     \>> 'help' STO
 

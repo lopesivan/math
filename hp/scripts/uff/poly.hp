@@ -1,0 +1,101 @@
+@ ============================================================================
+@ poly
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   { + P}
+   p
+   f
+   {expand EXPAND}
+   {factor FACTOR}
+  }
+
+  load \<< Load \>>
+
+END 'poly' STO
+poly
+@UPDIR
+@ ============================================================================
+
+@ ============================================================================
+@ ->P
+@ ============================================================================
+DIR
+
+  @ description:
+  @ Algoritmo de Briot-Ruffini, por vezes denominado apenas como regra de Ruffini,
+  @ é um método de resolução de frações polinomiais, criado por Paolo Ruffini.
+  @ Esse algoritmo consiste em efetuar a divisão fazendo cálculos apenas com
+  @ coeficientes e só serve para divisões de um polinômio por um binômio.  As
+  @ divisões de polinômios por binômios, como por exemplo: (x-2), (x+3/2) e (x+5),
+  @ surgem em problemas de matemática mais frequentemente do que quaisquer outras
+  @ divisões de polinômios e desempenham papel importante na pesquisa de zeros de
+  @ funções e na resolução de equações.  O quociente e o resto da divisão de um
+  @ polinômio P(x) por um binômio do tipo (x-a) podem ser obtidos através de um
+  @ dispositivo prático, conhecido como divisão sintética ou algoritmo de
+  @ Briot-Ruffini.
+
+  briot
+  \<< @ briot(grau, raiz)
+      \-> eq, grau, raiz
+      \<< {} 'cofs' STO                   @ inicializando cofs como lista vazia
+          eq raiz                         @ carrega eq e raiz
+          1 grau FOR I                    @
+              HORNER cofs + 'cofs' STO    @
+          NEXT {1} cofs +
+          'cofs' PURGE
+      \>>
+  \>>
+  @
+
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   {op \<< 92.2 KEYEVAL 12.1 KEYEVAL \>>}
+   briot
+  }
+
+  load \<< Load \>>
+
+END 'P' STO
+@ ============================================================================
+
+@ ============================================================================
+@ ->p
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+    {coef PCOEF}
+    {root PROOT}
+    {val  PEVAL}
+    {input \->ARRY}
+  }
+
+  load \<< Load \>>
+
+END 'p' STO
+@ ============================================================================
+
+@ ============================================================================
+@ ->f
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+    {coef FCOEF}
+    {root FROOTS}
+    {q QUOT}
+    {r REMAINDER}
+    {part PARTFRAC}
+  }
+
+  load \<< Load \>>
+
+END 'f' STO
+@ ============================================================================
+

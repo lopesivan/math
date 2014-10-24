@@ -1,0 +1,45 @@
+HOME 'root' PGDIR
+
+@ ============================================================================
+@ root
+@ ============================================================================
+DIR
+  @
+  @ local functions
+  @
+
+  @ trocar entre cordenadas retangulares e polar
+  =XYZ-POLAR=
+  \<< -15 CF -16 FS? \-> X
+  \<<
+      IF 'X'
+      THEN RECT
+      ELSE CYLIN
+      END
+  \>>
+  \>>
+
+  @ trocar RAD -> DEG
+  =DEG-RAD=
+  \<< -18 CF -17 FS? \-> X
+  \<<
+      IF 'X'
+      THEN DEG
+      ELSE RAD
+      END
+  \>>
+  \>>
+
+  @ pega a e b no stack e transforma em (a,b)
+  S\->C
+  \<< \-> a, b
+      \<<  '(a,\< b)' EVAL \>>
+  \>>
+
+  CST
+  {{+ \<< 22.2 KEYEVAL uff \>> }
+      {HELP HELP}
+  }
+
+END 'root' STO root
+@ ============================================================================

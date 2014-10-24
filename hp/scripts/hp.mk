@@ -6,8 +6,10 @@ OUT       = $(foreach s,$(SRCS), $(addprefix $(s:.hp50=.), $(EXT)))
 PROGRAM   = $(SRCS:.hp50=.hpprg)
 TARGETS   = $(PROGRAM)
 
-all: $(TARGETS)
+all: mount $(TARGETS)
 
+mount:
+	./$(MOUNT)
 %.hpprg: %.hp50
 	./$(SCRIPT) $^ > $@
 ide:
@@ -16,5 +18,4 @@ emu:
 	wine $(EMU)
 clean:
 	/bin/rm -rf $(TARGETS) *~ $(OUT)
-
 # END OF FILE
