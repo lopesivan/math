@@ -1,0 +1,22 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+PUSH -70 SF
+"=@127@==@127@==@127@==@127@==@127@==@127@=FORMULARIO=@127@==@127@==@127@==@127@==@127@==@127@="
+0 \->GROB
+'a^x=1+x*LN(a)'
+0 \->GROB GROBADD
+'LN(1+a*x)=a*x'
+0 \->GROB GROBADD
+'2*Jn=SIN(X)^(n-1)*COS(X)+(n-1)*Jn-2'
+0 \->GROB GROBADD
+'Jn=INTVX(COS(X)^n)'
+0 \->GROB GROBADD
+SCROLL
+POP
+\>>
+

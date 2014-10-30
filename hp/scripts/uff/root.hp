@@ -33,7 +33,30 @@ DIR
   @ pega a e b no stack e transforma em (a,b)
   S\->C
   \<< \-> a, b
-      \<<  '(a,\< b)' EVAL \>>
+      \<<  '(a,\<) b)' EVAL \>>
+  \>>
+
+  inMatSol
+  \<< @ a entrada são duas matrizes e suas dimensoes
+    @7 -2 -2 12 2 2 -3 -4 2 1
+    2 \->LIST
+    \->ARRY
+    B STO
+    2 \->LIST
+    \->ARRY
+    A STO
+    A INV B *
+    {A B} PURGE
+  \>>
+
+  inMatrref
+  \<< @ entrada é o numero de linhas da matriz
+    @7 -2 -3 -2 12 -4 2
+    DUP 1 +
+    2
+    \->LIST
+    \->ARRY
+    RREF
   \>>
 
   CST

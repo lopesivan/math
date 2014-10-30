@@ -8,7 +8,7 @@ s|=estrela-delta=|Y\d173\d155|g
 s|=DEG-RAD=|D\d142\d141R|g
 s|=XYZ-POLAR=|XY\d142\d141P|g
 s|=nabla=|\d130|g
-
+s|=@127@=|\d127|g
 
 s|\\omega|\d154|g
 s|\\Delta|\d155|g

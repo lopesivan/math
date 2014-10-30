@@ -1,0 +1,15 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Mostra o menu de opções e chama a função correspondente à escolha
+"Gerenciador de Backup"
+{{"Fazer backup" :3:"BACKUPS/FAZER"}{"Ver backups" :3:"BACKUPS/MOSTRAR"}{"Desinstalar" :3:"BACKUPS/DESINSTALAR"}{"Sair" 0.}}
+1
+IF CHOOSE THEN
+	IF DUP 0. SAME THEN
+		DROP
+	ELSE
+		@ Executa o comando
+		EVAL
+	END
+END
+\>>

@@ -1,0 +1,192 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Instala o programa no SD
+
+@ Verifica o SD
+:3:"BACKUPS/TESTE" PURGE
+IFERR
+	1. :3:"BACKUPS/TESTE" STO
+THEN
+	@ Erro
+	DROP2 CLLCD
+	"Insira cart\227o\010de mem\243ria" 1. DISP
+	2000. .2 BEEP
+	2. WAIT
+ELSE
+	@ Confirma
+	CLLCD
+	"Gerenciador de backup\010Vers\227o 1.1" 1. DISP
+	2. WAIT
+	2000 .2 BEEP
+	IF "Deseja instalar?" {{"Sim" 1.}{"N\227o" 0.}} 1. CHOOSE NOT THEN
+		0 DOERR
+	ELSE
+		IF NOT THEN
+			0 DOERR
+		END
+	END
+END
+
+@ Grava as variáveis no SD
+CLLCD
+"Extraindo" 1. DISP
+
+"INFO        (1/9)" 2. DISP
+{}
+:3:"BACKUPS/INFO" DUP PURGE STO
+
+"RESTAURAR   (2/9)" 2. DISP
+\<< :3: "BACKUPS/FAZER" EVAL RESTORE
+\>>
+:3:"BACKUPS/RESTAURAR" DUP PURGE STO
+
+"MOSTRAR     (3/9)" 2. DISP
+\<< :3: "BACKUPS/INFO" RCL { { "Voltar" 0. } } + "Backups realizados" SWAP 0.
+  IF CHOOSE
+  THEN
+    IF DUP 0. SAME
+    THEN DROP :3: "BACKUPS/BACKUP" EVAL
+    ELSE "O que deseja fazer?" { { "Restaurar" :3: "BACKUPS/RESTAURAR" } { "Excluir" :3: "BACKUPS/EXCLUIR" } { "Voltar" 0. } } 1.
+      IF CHOOSE
+      THEN
+        IF DUP 0. SAME
+        THEN DROP2 :3: "BACKUPS/MOSTRAR" EVAL
+        ELSE EVAL
+        END
+      ELSE DROP
+      END
+    END
+  END
+\>>
+:3:"BACKUPS/MOSTRAR" DUP PURGE STO
+
+"GERARID     (4/9)" 2. DISP
+\<< RAND RAND RAND RAND RAND RAND RAND 7. \->LIST 25. * 65. ADD FLOOR CHR \GSLIST
+\>>
+:3:"BACKUPS/GERARID" DUP PURGE STO
+
+"FAZER       (5/9)" 2. DISP
+\<< CLLCD "Aguarde..." 1. DISP DATE TIME TSTR
+  IF -41 FS?
+  THEN DUP 1. 13. SUB SWAP 15. 19. SUB +
+  ELSE DUP 1. 18. SUB SWAP 22. 22. SUB +
+  END DUP PATH SWAP HOME 'BACKUPDATA' STO RCLF 'BACKUPFLAGS' STO
+  \<< "Restaurado para" 1. DISP BACKUPDATA 2. DISP 2000. .4 BEEP 4. WAIT BACKUPFLAGS STOF BACKUPPATH EVAL { STARTUP BACKUPDATA BACKUPFLAGS BACKUPPATH } PURGE
+  \>> 'STARTUP' STO DUP 'BACKUPPATH' STO :3: TEMPBACKUPS PURGE :3: TEMPBACKUPS ARCHIVE { STARTUP BACKUPDATA BACKUPFLAGS BACKUPPATH } PURGE EVAL "BACKUPS/" :3: "BACKUPS/GERARID" EVAL + "3" \->TAG DUP :3: TEMPBACKUPS RCL SWAP STO :3: TEMPBACKUPS PURGE 2. \->LIST 1. \->LIST
+  IFERR :3: "BACKUPS/INFO" RCL
+  THEN { } :3: "BACKUPS/INFO" STO
+  END DROP :3: "BACKUPS/INFO" RCL + DUP SIZE \-> size
+  \<<
+    IF size 10. >
+    THEN DUP size GET 2. GET PURGE 1. size 1. - SUB
+    END
+  \>> :3: "BACKUPS/INFO" PURGE :3: "BACKUPS/INFO" STO "Backup realizado" 1. DISP 2000. .1 BEEP 2. WAIT "" 1. DISP
+\>>
+:3:"BACKUPS/FAZER" DUP PURGE STO
+
+"EXCLUIR     (6/9)" 2. DISP
+\<< :3: "BACKUPS/INFO" RCL \-> nome info
+  \<<
+    IFERR 1. info SIZE
+      FOR j
+        IF info j GET 2. GET nome SAME
+        THEN info 1. j 1. - SUB info j 1. + info SIZE SUB + :3: "BACKUPS/INFO" PURGE :3: "BACKUPS/INFO" STO 0 DOERR
+        END
+      NEXT
+    THEN
+    END nome PURGE
+  \>> :3: "BACKUPS/MOSTRAR" EVAL
+\>>
+:3:"BACKUPS/EXCLUIR" DUP PURGE STO
+
+"DESINSTALAR (7/9)" 2. DISP
+\<<
+  IF "Deseja desinstalar?" { { "Sim" 1. } { "N\227o" 0. } } 2. CHOOSE
+  THEN
+    IF
+    THEN CLLCD "Excluindo backups" 1. DISP :3: "BACKUPS/INFO" RCL
+      IF DUP SIZE 0. >
+      THEN OBJ\-> 1. SWAP
+        START 2. GET PURGE
+        NEXT
+      ELSE DROP END "Excluindo arquivos" 1. DISP :3: "BACKUPS/TESTE" PURGE :3: "BACKUPS/RESTAURAR" PURGE :3: "BACKUPS/MOSTRAR" PURGE :3: "BACKUPS/GERARID" PURGE :3: "BACKUPS/FAZER" PURGE :3: "BACKUPS/EXCLUIR" PURGE :3: "BACKUPS/BACKUP" PURGE :3: "BACKUPS/VERSAO" PURGE :3: "BACKUPS/INFO" PURGE :3: "BACKUPS/DESINSTALAR" PURGE 53.1 DELKEYS "Programa desinstalado com sucesso" MSGBOX
+    ELSE :3: "BACKUPS/BACKUP" EVAL
+    END
+  END
+\>>
+:3:"BACKUPS/DESINSTALAR" DUP PURGE STO
+
+"BACKUP      (8/9)" 2. DISP
+\<< "Gerenciador de Backup" { { "Fazer backup" :3: "BACKUPS/FAZER" } { "Ver backups" :3: "BACKUPS/MOSTRAR" } { "Desinstalar" :3: "BACKUPS/DESINSTALAR" } { "Sair" 0. } } 1
+  IF CHOOSE
+  THEN
+    IF DUP 0. SAME
+    THEN DROP
+    ELSE EVAL
+    END
+  END
+\>>
+:3:"BACKUPS/BACKUP" DUP PURGE STO
+
+"VERSAO      (9/9)" 2. DISP
+"1.1 - 20/06/2011"
+:3:"BACKUPS/VERSAO" DUP PURGE STO
+
+CLLCD "Configurando" 1. DISP
+@ Cria a tecla de atalho
+\<<
+:3:"BACKUPS/TESTE" PURGE
+IFERR 1. :3:"BACKUPS/TESTE" STO THEN
+	DROP2
+	"Insira cart\227o\010de mem\243ria" 1. DISP
+	2000. .2 BEEP
+	2. WAIT
+ELSE
+	:3:"BACKUPS/BACKUP" EVAL
+END
+\>> 53.1 ASN
+
+@ Define o alarme
+"Fazer backup autom\225tico?"
+{{"Nunca" 0.}{"Todo dia" 1.}{"A cada 2 dias" 2.}{"A cada 3 dias" 3.}{"A cada 5 dias" 5.}{"A cada semana" 7.}}
+4.
+IF CHOOSE THEN
+	IF DUP THEN
+		DATE 1. DATE+ SWAP
+		0. SWAP
+		\<<
+		:3:"BACKUPS/TESTE" PURGE
+		IFERR 1. :3:"BACKUPS/TESTE" STO THEN
+			DROP2 CLLCD
+			"Insira cart\227o\010de mem\243ria" 1. DISP
+			2000. .2 BEEP
+			2. WAIT
+		ELSE
+			IFERR :3:"BACKUPS/FAZER" RCL THEN
+				DROP DELALARM
+			ELSE
+				SWAP DROP EVAL
+			END
+		END OFF
+		\>> SWAP
+		24. 60. 60. 8192. * * * *
+		4. \->LIST STOALARM DROP
+	ELSE
+		DROP
+	END
+END
+
+IF 'INSBACKUP' VTYPE -1. \=/ THEN
+	@ Exclui o instalador
+	IF "Excluir instalador?" {{"Sim" 1.}{"N\227o" 0.}} 1. CHOOSE THEN
+		IF THEN 'INSBACKUP' PURGE END
+	END
+END
+
+@ Exibe o resultado
+CLLCD
+"Instala\231\227o conclu\237da" 1. DISP
+2000. .4 BEEP
+"Presione shift esquerdo, depois alpha e S para gerenciar os backups"
+MSGBOX
+\>>

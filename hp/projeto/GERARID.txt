@@ -1,0 +1,6 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Retorna um ID aleatório com 7 letras
+RAND RAND RAND RAND RAND RAND RAND 7. \->LIST
+25. * 65. ADD FLOOR CHR \GSLIST
+\>>

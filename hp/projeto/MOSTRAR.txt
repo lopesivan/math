@@ -1,0 +1,26 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Mostra todos os backups feitos
+:3:"BACKUPS/INFO" RCL
+{{"Voltar" 0.}} +
+"Backups realizados" SWAP 0.
+IF CHOOSE THEN
+	IF DUP 0. SAME THEN
+		DROP :3:"BACKUPS/BACKUP" EVAL
+	ELSE
+		@ Pergunta o que quer fazer
+		"O que deseja fazer?"
+		{{"Restaurar" :3:"BACKUPS/RESTAURAR"}{"Excluir" :3:"BACKUPS/EXCLUIR"}{"Voltar" 0.}}
+		1.
+		IF CHOOSE THEN
+			IF DUP 0. SAME THEN
+				DROP2 :3:"BACKUPS/MOSTRAR" EVAL
+			ELSE
+				EVAL
+			END
+		ELSE
+			DROP
+		END
+	END
+END
+\>>

@@ -4,7 +4,7 @@
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
     { + P}
     {C COMB}
     {A PERM}
@@ -24,8 +24,10 @@ stat
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {op \<< 44.2 KEYEVAL 15.1 KEYEVAL \>> }
+   {C \<< COMB 3 ROLLD COMB \>> }
+   {C \<< PERM 3 ROLLD PERM \>> }
   }
 
   load \<< Load \>>

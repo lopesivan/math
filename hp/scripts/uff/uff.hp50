@@ -40,7 +40,30 @@ DIR
   @ pega a e b no stack e transforma em (a,b)
   S\->C
   \<< \-> a, b
-      \<<  '(a,\< b)' EVAL \>>
+      \<<  '(a,\<) b)' EVAL \>>
+  \>>
+
+  inMatSol
+  \<< @ a entrada são duas matrizes e suas dimensoes
+    @7 -2 -2 12 2 2 -3 -4 2 1
+    2 \->LIST
+    \->ARRY
+    B STO
+    2 \->LIST
+    \->ARRY
+    A STO
+    A INV B *
+    {A B} PURGE
+  \>>
+
+  inMatrref
+  \<< @ entrada é o numero de linhas da matriz
+    @7 -2 -3 -2 12 -4 2
+    DUP 1 +
+    2
+    \->LIST
+    \->ARRY
+    RREF
   \>>
 
   CST
@@ -56,14 +79,14 @@ END 'root' STO root
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
     in sol cir calc poly stat edo mec
   }
 
   cpf  \<< 08349232706 \>>
   id   \<< identidade \>>
   ufid \<< 212038104 \>>
-  load \<< Loader \>>
+  load \<< Load \>>
 
 END 'uff' STO
 uff
@@ -77,7 +100,10 @@ DIR
   {{\|^  \<< UPDIR Load \>> }
    { + P}
    {Sets sets}
-   C M L ponto
+   {C COMPLEX}
+   {M MATRIZ}
+   {L LISTA}
+   ponto
   }
 
   load \<< Load \>>
@@ -92,10 +118,17 @@ in
 @ ============================================================================
 DIR
 
+  inMat
+  \<<
+    2 \->LIST \->ARRY
+  \>>
+
+
   CST
   {{\|^  \<< UPDIR Load \>> }
-   p1
-   p2
+   {M    inMat   }
+   {MSol inMatSol}
+   {MSol inMatrref}
   }
 
   load \<< Load \>>
@@ -120,7 +153,7 @@ END 'sets' STO
 @ ============================================================================
 
 @ ============================================================================
-@ ->C
+@ ->COMPLEX
 @ ============================================================================
 DIR
 
@@ -136,7 +169,7 @@ DIR
 
   load \<< Load \>>
 
-END 'C' STO
+END 'COMPLEX' STO
 @ ============================================================================
 
 @ ============================================================================
@@ -152,7 +185,7 @@ DIR
 
   load \<< Load \>>
 
-END 'L' STO
+END 'LISTA' STO
 @ ============================================================================
 
 @ ============================================================================
@@ -169,7 +202,7 @@ DIR
 
   load \<< Load \>>
 
-END 'M' STO
+END 'MATRIZ' STO
 @ ============================================================================
 
 @ ============================================================================
@@ -179,10 +212,12 @@ DIR
 
   CST
   {{\|^  \<< UPDIR Load \>> }
-   {\->p2 \<< 0, 0 \-> a, b    \<<  '(a, b)' EVAL \>> \>> }
+   {C\->R \<< C\->R \>> }
+   {R\->C \<< R\->C \>> }
+   {\->NUM \<< \->NUM \>> }
+   {\->Q \<< \->Q \>> }
    {reta  \<< R\->C 3 ROLLD R\->C DROITE \->Q \>>}
-}
-
+  }
 
   load \<< Load \>>
 
@@ -195,7 +230,7 @@ UPDIR @ estou no uff
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    { + P}
    solve
    zeros
@@ -216,11 +251,12 @@ sol
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
-   {reta  \<< R\->C 3 ROLLD R\->C DROITE \->Q \>>}
-   X
-   Y
-   Z
+  {{\|^  \<< UPDIR Load \>> }
+   {op  \<< 72.2 KEYEVAL \>>  }
+   {LS ls}
+   {MSol inMatSol}
+   {MSol inMatrref}
+   {reta  \<< R\->C 3 ROLLD R\->C DROITE \->Q \>> }
   }
 
   load \<< Load \>>
@@ -234,7 +270,7 @@ END 'P' STO
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {x \<< SOLVEVX   \>> }
    {y \<< 'Y' SOLVE \>> }
    {z \<< 'Z' SOLVE \>> }
@@ -246,12 +282,29 @@ END 'solve' STO
 @ ============================================================================
 
 @ ============================================================================
+@ ->ls
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   {2   \<< {2} \->ARRY 's1' STO s1 X Y {2} \->ARRY LINSOLVE \>> }
+   {3   \<< {3} \->ARRY 's1' STO s1 Y Z {3} \->ARRY LINSOLVE \>> }
+   {4   \<< {4} \->ARRY 's1' STO s1 X Y Z W {4} \->ARRY LINSOLVE \>> }
+   {n   \<< \->ARRY LINSOLVE \>> }
+  }
+
+  load \<< Load \>>
+
+END 'ls' STO
+@ ============================================================================
+@ ============================================================================
 @ ->zeros
 @ ============================================================================
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {x \<< 'X' ZEROS \>>}
    {y \<< 'Y' ZEROS \>>}
    {z \<< 'Z' ZEROS \>>}
@@ -268,7 +321,7 @@ END 'zeros' STO
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {f FACTOR}
    {s FACTORS}
    X
@@ -280,7 +333,6 @@ DIR
 
 END 'factor' STO
 @ ============================================================================
-
 
 UPDIR @ estou no uff
 @ ============================================================================
@@ -396,10 +448,63 @@ calc
 @ ============================================================================
 DIR
 
+  @ derivada de f(x)
+  derivadafx
+  \<<
+    X       @ variável da integração
+    \.d     @ derivada de f(X)
+  \>>
+
+  @ Integral de X^2
+  integralfx
+  \<<
+    0       @ a
+    X       @ b
+    3 ROLL  @ pega f(X)
+    X       @ variável da integração
+    \.S     @ Integral
+  \>>
+
+  @ del ou nabla []
+  nablaXYZ
+  \<<
+    + +
+    X Y Z
+    {3}
+    \->ARRY
+    @HESS DROP
+    DERIV
+    DUP DUP DUP
+    1 GET
+    2 ROLL
+    2 GET
+    3 ROLL
+    3 GET
+  \>>
+
+  @ del ou nabla []
+  nablaHessXYZ
+  \<<
+    + +
+    X Y Z
+    {3}
+    \->ARRY
+    @HESS DROP
+    HESS DROP
+    DUP DUP DUP
+    1 GET
+    2 ROLL
+    2 GET
+    3 ROLL
+    3 GET
+  \>>
+
   CST
-  {{\|^  \<< UPDIR Load \>> }
-   p1
-   p2
+  {{\|^  \<< UPDIR Load \>>}
+   {dx   \<< derivadafx \>>}
+   {Ix   \<< integralfx \>>}
+   {\.V  \<< nablaXYZ   \>>}
+   {\.V  \<< nablaHessXYZ   \>>}
   }
 
   load \<< Load \>>
@@ -604,7 +709,7 @@ UPDIR @ estou no uff
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
     { + P}
     {C COMB}
     {A PERM}
@@ -624,8 +729,10 @@ stat
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {op \<< 44.2 KEYEVAL 15.1 KEYEVAL \>> }
+   {C \<< COMB 3 ROLLD COMB \>> }
+   {C \<< PERM 3 ROLLD PERM \>> }
   }
 
   load \<< Load \>>

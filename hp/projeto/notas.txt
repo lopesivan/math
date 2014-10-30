@@ -1,0 +1,15 @@
+Operações:
+BACKUP => mostra o menu inicial (FAZER, MOSTRAR ou DESINSTALAR?)
+DESINSTALAR => deleta os arquivos do SD e tira os atalhos
+EXCLUIR => exclui um backup
+FAZER => faz o backup (verifica o SD, faz o backup, grava a data)
+GERARID => gera um id aleatório com 7 letras
+INSBACKUP => instalador: salva tudo no SD, cria os atalhos e o alarme
+MOSTRAR => mostra os backups já feitos
+RESTAURAR => restaura um backup (faz um backup, restaura)
+VERSAO => informa a versão atual
+
+Os backups ficam salvos na pasta :3:BACKUPS
+A lista dos backups fica em :3:BACKUPS/INFO
+Cada item é da forma {data nome}
+O nome dos backups é aleatório

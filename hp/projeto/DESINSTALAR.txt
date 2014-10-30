@@ -1,0 +1,42 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Desinstala o programa :(
+
+@ Confirma
+IF "Deseja desinstalar?" {{"Sim" 1.}{"N\227o" 0.}} 2. CHOOSE THEN
+	IF THEN
+		@ Exclui todos os backups
+		CLLCD "Excluindo backups" 1. DISP
+		:3:"BACKUPS/INFO" RCL
+		IF DUP SIZE 0. > THEN
+			OBJ\-> 1. SWAP START
+				2. GET PURGE
+			NEXT
+		ELSE
+			DROP
+		END
+		
+		@ Exclui os arquivos
+		"Excluindo arquivos" 1. DISP
+		:3:"BACKUPS/TESTE" PURGE
+		:3:"BACKUPS/RESTAURAR" PURGE
+		:3:"BACKUPS/MOSTRAR" PURGE
+		:3:"BACKUPS/GERARID" PURGE
+		:3:"BACKUPS/FAZER" PURGE
+		:3:"BACKUPS/EXCLUIR" PURGE
+		:3:"BACKUPS/BACKUP" PURGE
+		:3:"BACKUPS/VERSAO" PURGE
+		:3:"BACKUPS/INFO" PURGE
+		:3:"BACKUPS/DESINSTALAR" PURGE
+		
+		@ Exclui a tecla
+		53.1 DELKEYS
+		
+		@ Desinstalação concluída
+		"Programa desinstalado com sucesso" MSGBOX
+	ELSE
+		@ Volta para o menu
+		:3:"BACKUPS/BACKUP" EVAL
+	END
+END
+\>>

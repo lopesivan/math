@@ -4,14 +4,14 @@
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
     in sol cir calc poly stat edo mec
   }
 
   cpf  \<< 08349232706 \>>
   id   \<< identidade \>>
   ufid \<< 212038104 \>>
-  load \<< Loader \>>
+  load \<< Load \>>
 
 END 'uff' STO
 uff

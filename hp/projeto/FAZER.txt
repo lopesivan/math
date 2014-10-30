@@ -1,0 +1,66 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Realiza o backup
+
+CLLCD
+"Aguarde..." 1. DISP
+
+@ Pega a data
+DATE TIME TSTR
+IF -41 FS? THEN
+	@ "SUN 19.06.11  15:54:50" => "SUN 19.06.11 15:54"
+	DUP 1. 13. SUB SWAP 15. 19. SUB +
+ELSE
+	@ "SUN 19.06.11 03:54:50P" => "SUN 19.06.11 03:54P"
+	DUP 1. 18. SUB SWAP 22. 22. SUB +
+END
+
+@ Salva a data, as flags, o diretório e a stack atual no próprio backup
+DUP PATH SWAP HOME 'BACKUPDATA' STO
+RCLF 'BACKUPFLAGS' STO
+\<< "Restaurado para" 1. DISP
+BACKUPDATA 2. DISP
+2000. .4 BEEP 4. WAIT
+BACKUPFLAGS STOF
+BACKUPPATH EVAL
+{STARTUP BACKUPDATA BACKUPFLAGS BACKUPPATH} PURGE \>> 'STARTUP' STO
+DUP 'BACKUPPATH' STO
+
+@ Faz o backup
+:3:TEMPBACKUPS PURGE
+:3:TEMPBACKUPS ARCHIVE
+
+@ Elimina as variáveis criadas
+{STARTUP BACKUPDATA BACKUPFLAGS BACKUPPATH} PURGE
+EVAL
+
+@ Salva a data e move o backup
+"BACKUPS/" :3:"BACKUPS/GERARID" EVAL + "3" \->TAG DUP
+:3:TEMPBACKUPS RCL SWAP STO
+:3:TEMPBACKUPS PURGE
+2. \->LIST 1. \->LIST
+
+@ Salva as informações numa lista
+IFERR :3:"BACKUPS/INFO" RCL THEN
+	@ Cria a lista
+	{} :3:"BACKUPS/INFO" STO
+END DROP
+:3:"BACKUPS/INFO" RCL +
+
+@ Elimina backups antigos
+DUP SIZE \-> size \<<
+	IF size 10. > THEN
+		DUP size GET 2. GET PURGE
+		1. size 1. - SUB
+	END
+\>>
+:3:"BACKUPS/INFO" PURGE
+:3:"BACKUPS/INFO" STO
+
+@ Exibe mensagem de sucesso
+"Backup realizado" 1. DISP
+2000. .1 BEEP
+2. WAIT
+
+"" 1. DISP
+\>>

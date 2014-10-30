@@ -1,0 +1,10 @@
+%%HP: T(3)A(R)F(.);
+\<<
+@ Restaura um backup antigo
+@ Recebe como parâmetro o nome do backup
+
+@ Faz um novo backup antes
+:3:"BACKUPS/FAZER" EVAL
+
+RESTORE
+\>>

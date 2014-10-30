@@ -4,7 +4,7 @@
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    { + P}
    solve
    zeros
@@ -25,11 +25,12 @@ sol
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
-   {reta  \<< R\->C 3 ROLLD R\->C DROITE \->Q \>>}
-   X
-   Y
-   Z
+  {{\|^  \<< UPDIR Load \>> }
+   {op  \<< 72.2 KEYEVAL \>>  }
+   {LS ls}
+   {MSol inMatSol}
+   {MSol inMatrref}
+   {reta  \<< R\->C 3 ROLLD R\->C DROITE \->Q \>> }
   }
 
   load \<< Load \>>
@@ -43,7 +44,7 @@ END 'P' STO
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {x \<< SOLVEVX   \>> }
    {y \<< 'Y' SOLVE \>> }
    {z \<< 'Z' SOLVE \>> }
@@ -55,12 +56,29 @@ END 'solve' STO
 @ ============================================================================
 
 @ ============================================================================
+@ ->ls
+@ ============================================================================
+DIR
+
+  CST
+  {{\|^  \<< UPDIR Load \>> }
+   {2   \<< {2} \->ARRY 's1' STO s1 X Y {2} \->ARRY LINSOLVE \>> }
+   {3   \<< {3} \->ARRY 's1' STO s1 Y Z {3} \->ARRY LINSOLVE \>> }
+   {4   \<< {4} \->ARRY 's1' STO s1 X Y Z W {4} \->ARRY LINSOLVE \>> }
+   {n   \<< \->ARRY LINSOLVE \>> }
+  }
+
+  load \<< Load \>>
+
+END 'ls' STO
+@ ============================================================================
+@ ============================================================================
 @ ->zeros
 @ ============================================================================
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {x \<< 'X' ZEROS \>>}
    {y \<< 'Y' ZEROS \>>}
    {z \<< 'Z' ZEROS \>>}
@@ -77,7 +95,7 @@ END 'zeros' STO
 DIR
 
   CST
-  {{\|^  \<< UPDIR Loader \>> }
+  {{\|^  \<< UPDIR Load \>> }
    {f FACTOR}
    {s FACTORS}
    X
@@ -89,5 +107,4 @@ DIR
 
 END 'factor' STO
 @ ============================================================================
-
 

@@ -23,10 +23,63 @@ calc
 @ ============================================================================
 DIR
 
+  @ derivada de f(x)
+  derivadafx
+  \<<
+    X       @ variável da integração
+    \.d     @ derivada de f(X)
+  \>>
+
+  @ Integral de X^2
+  integralfx
+  \<<
+    0       @ a
+    X       @ b
+    3 ROLL  @ pega f(X)
+    X       @ variável da integração
+    \.S     @ Integral
+  \>>
+
+  @ del ou nabla []
+  nablaXYZ
+  \<<
+    + +
+    X Y Z
+    {3}
+    \->ARRY
+    @HESS DROP
+    DERIV
+    DUP DUP DUP
+    1 GET
+    2 ROLL
+    2 GET
+    3 ROLL
+    3 GET
+  \>>
+
+  @ del ou nabla []
+  nablaHessXYZ
+  \<<
+    + +
+    X Y Z
+    {3}
+    \->ARRY
+    @HESS DROP
+    HESS DROP
+    DUP DUP DUP
+    1 GET
+    2 ROLL
+    2 GET
+    3 ROLL
+    3 GET
+  \>>
+
   CST
-  {{\|^  \<< UPDIR Load \>> }
-   p1
-   p2
+  {{\|^  \<< UPDIR Load \>>}
+   {dx   \<< derivadafx \>>}
+   {Ix   \<< integralfx \>>}
+   {\.V  \<< nablaXYZ   \>>}
+   {\.V  \<< nablaHessXYZ   \>>}
   }
 
   load \<< Load \>>

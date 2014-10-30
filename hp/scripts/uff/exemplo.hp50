@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+\<<
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+X Y Z
+{3}
+\->ARRY
+\.V
+
+
+@ derivada de X^2
+X 2 ^   @ f(X)=X^2
+X       @ variável da integração
+\.d     @ derivada de X^2
+
+@ Integral de X^2
+0       @ a
+X       @ b
+X 2 ^   @ f(X)=X^2
+X       @ variável da integração
+\.S     @ Integral
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\>>

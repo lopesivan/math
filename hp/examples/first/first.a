@@ -1,0 +1,27 @@
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	1
+	CON(5)	=!NO
+* CODE
+	CON(5)	=DOCODE
+	REL(5)	LBL000
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	2
+!RPL
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	3
+::
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	4
+  CK1NOLASTWD   (check if there is an argument)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	5
+  CK&DISPATCH1  (check if it is a real number)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	6
+  BINT1 ::      (if it is)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	7
+    %2 %^       (square the radius)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	8
+    %PI         (put PI in the stack)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	9
+    %*          (and multiply)
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	10
+  ;
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	11
+;
+* File	/home/ivan/workspace/math/hp/examples/first/first.s	12
+@
