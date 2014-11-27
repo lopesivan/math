@@ -1,0 +1,6 @@
+Wave Length:
+\lambda=\frac{v_p}{f}
+Quadratic Equation:
+ax^2+bx+c=0
+Solution:
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}

@@ -16,6 +16,49 @@ PUSH -70 SF
 0 \->GROB GROBADD
 'Jn=INTVX(COS(X)^n)'
 0 \->GROB GROBADD
+"Derivadas
+
+1.y=u^(n) => y'=n.u^(n-1).u'
+
+2.y=u.v => y'=u'.v+u.v'
+
+3.y=u/v => y'=u'.v-u.v'/v^(2)
+
+4.y=a^u => y'=a^(u).(Ln a).u'
+
+5.y=e^(u) => y'=e^(u).u'
+
+6.y=Lg u => y'=(u'/u).Lg e
+      a                 a
+
+7.y=Ln u => y'=(1/u).u'
+
+8.y=u^(v) => y'=v.u^(v-1).u'+u^(v).Ln u.v'
+
+9.y=senu => y'=u'.cosu
+
+10.y=cosu => y'=-u'.senu
+
+11.y=tgu => y'=u'sec^(2)u
+
+12.y=cotgu => y'=-u'.cosc^(2)u
+
+13.y=secu => y'=u'.secu.tgu
+
+14.y=coscu => y'=-u'.coscu.cotgu
+
+15.y=arcsenu => y'=u'/Sqrt(1-u^(2))
+
+16.y=arccosu => y'=-u'/Sqrt(1-u^(2))
+
+17.y=arctgu => y'=u'/1+u^(2)
+
+18.y=arccotgu => y'=-u'/1+u^(2)
+
+19.y=arcsecu => y'=u'/!u!.Sqrt(u^(2)-1)
+
+20.y=arccosecu => y'=-u'/!u!.Sqrt(u^(2)-1)
+
 SCROLL
 POP
 \>>

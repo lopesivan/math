@@ -1,0 +1,22 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+@ soma 1/2^n ...
+
+\<<
+    \<< 0,0,1 \-> L,T,S,n
+        \<<
+            WHILE S L <
+            REPEAT 2 n * 1 -  'T' STO
+                   T 'S' STO*
+                   'n' 1 STO-
+            END
+            S
+        \>>
+    \>>
+    'f' STO
+\>>
+

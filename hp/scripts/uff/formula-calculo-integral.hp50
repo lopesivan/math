@@ -1,0 +1,77 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+PUSH -70 SF
+"=@127@==@127@==@127@==@127@==@127@==@127@=INTEGRAL=@127@==@127@==@127@==@127@==@127@==@127@==@127@==@127@==@127@==@127@==@127@="
+0 \->GROB
+
+"1.Idu=u+c"
+0 \->GROB GROBADD
+
+"2.Iu^(n).du=(u^(n+1)/n+1)+c"
+0 \->GROB GROBADD
+
+"3.Idu/u=Lnu +c"
+0 \->GROB GROBADD
+
+"4.Ia^(u).du=(a^(u)/Lna)+c"
+0 \->GROB GROBADD
+
+"5.Ie^(u).du=e^(u)+c"
+0 \->GROB GROBADD
+
+"6.I senu.du=-cosu+c"
+0 \->GROB GROBADD
+
+"7.I cosu.du=senu+c"
+0 \->GROB GROBADD
+
+"8.I tgu.du=ln!secu!+c"
+0 \->GROB GROBADD
+
+"9.I cotgu.du=ln!senu!+c"
+0 \->GROB GROBADD
+
+"10.I secu.du=ln!secu+tgu!+c"
+0 \->GROB GROBADD
+
+"11.I cosecu.du=ln!coscu-cotgu!+c"
+0 \->GROB GROBADD
+
+"12.I secu.tgu.du=secu+c"
+0 \->GROB GROBADD
+
+"13.I cosecu.cotgu.du=-cosecu+c"
+0 \->GROB GROBADD
+
+"14.I sec^(2)u.du=tgu+c"
+0 \->GROB GROBADD
+
+"15.I cosec^(2)u.du=-cotgu+c"
+0 \->GROB GROBADD
+
+"16.I du/u^(2)+a^(2)=(1/a).(arctgu/a)+c"
+0 \->GROB GROBADD
+
+"17.I du/u^(2)-a^(2)=(1/2a).ln!(u-a)/(u+a)!+c"
+0 \->GROB GROBADD
+
+"18.I du/Sqrt(u^(2)+a^(2))=ln!u+Sqrt(u^(2)+a^(2)!+c"
+0 \->GROB GROBADD
+
+"19.I du/Sqrt(u^(2)-a^(2))=ln!u+Sqrt(u^(2)-a^(2))!"
+0 \->GROB GROBADD
+
+"20.I du/Sqrt(a^(2)-u^(2))=arcsen(u/a)+c"
+0 \->GROB GROBADD
+
+"21.I du/u.Sqrt(u^(2)-a^(2))=(1/a).arcsec!u/a!+c"
+0 \->GROB GROBADD
+SCROLL
+POP
+\>>
+

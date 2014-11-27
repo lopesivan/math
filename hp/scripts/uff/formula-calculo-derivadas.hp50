@@ -1,0 +1,76 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Author: Ivan Lopes
+@ E-mail: ivanlopes@id.uff.br
+@ Version:
+
+\<<
+PUSH -70 SF
+"=@127@==@127@==@127@==@127@==@127@==@127@=DERIVADAS=@127@==@127@==@127@==@127@==@127@==@127@="
+0 \->GROB
+
+"1.y=u^(n) => y'=n.u^(n-1).u'"
+0 \->GROB GROBADD
+
+"2.y=u.v => y'=u'.v+u.v'"
+0 \->GROB GROBADD
+
+"3.y=u/v => y'=u'.v-u.v'/v^(2)"
+0 \->GROB GROBADD
+
+"4.y=a^u => y'=a^(u).(Ln a).u'"
+0 \->GROB GROBADD
+
+"5.y=e^(u) => y'=e^(u).u'"
+0 \->GROB GROBADD
+
+"6.y=Lg u => y'=(u'/u).Lg e
+      a                 a"
+0 \->GROB GROBADD
+
+"7.y=Ln u => y'=(1/u).u'"
+0 \->GROB GROBADD
+
+"8.y=u^(v) => y'=v.u^(v-1).u'+u^(v).Ln u.v'"
+0 \->GROB GROBADD
+
+"9.y=senu => y'=u'.cosu"
+0 \->GROB GROBADD
+
+"10.y=cosu => y'=-u'.senu"
+0 \->GROB GROBADD
+
+"11.y=tgu => y'=u'sec^(2)u"
+0 \->GROB GROBADD
+
+"12.y=cotgu => y'=-u'.cosc^(2)u"
+0 \->GROB GROBADD
+
+"13.y=secu => y'=u'.secu.tgu"
+0 \->GROB GROBADD
+
+"14.y=coscu => y'=-u'.coscu.cotgu"
+0 \->GROB GROBADD
+
+"15.y=arcsenu => y'=u'/Sqrt(1-u^(2))"
+0 \->GROB GROBADD
+
+"16.y=arccosu => y'=-u'/Sqrt(1-u^(2))"
+0 \->GROB GROBADD
+
+"17.y=arctgu => y'=u'/1+u^(2)"
+0 \->GROB GROBADD
+
+"18.y=arccotgu => y'=-u'/1+u^(2)"
+0 \->GROB GROBADD
+
+"19.y=arcsecu => y'=u'/!u!.Sqrt(u^(2)-1)"
+0 \->GROB GROBADD
+
+"20.y=arccosecu => y'=-u'/!u!.Sqrt(u^(2)-1)"
+0 \->GROB GROBADD
+
+SCROLL
+POP
+\>>
+

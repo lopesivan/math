@@ -1,9 +1,0 @@
-Calc1 es una libreria para las calculadoras hp48g y hp49g que contiene formulas de derivadas
-e integrales para calculo1
-Nota: para la hp48g necesitas tener instalada la libreria lupa
-      para la hp49g ya viene la libreria lupa en el formulario pero con el nombre de VISOR
-Autor: Erik Foronda Mayan
-Carrera de Ingenieria Civil
-Universidad Mayor De San Simon
-Cochabamba - Bolivia
-
