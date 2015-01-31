@@ -1,0 +1,447 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 256 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+257 "" 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 258 "Courier" 0 
+1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 259 "" 0 1 0 0 0 0 0 1 
+0 0 0 0 0 0 0 1 }{CSTYLE "" -1 260 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+}{CSTYLE "" -1 261 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+262 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 263 "" 
+0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 }{CSTYLE "" -1 264 "Courier" 0 1 255 
+0 0 1 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 265 "" 0 1 0 0 0 0 1 0 0 0 0 
+0 0 0 0 1 }{CSTYLE "" -1 266 "" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 267 "" 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+268 "" 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 }{CSTYLE "" -1 269 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 270 "Courier" 0 1 255 0 0 1 0 
+1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 271 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 
+0 }{CSTYLE "" -1 272 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" 
+-1 273 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 274 "" 0 1 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 275 "" 0 1 0 0 0 0 0 1 1 0 0 
+0 0 0 0 1 }{CSTYLE "" -1 276 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 277 "" 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+278 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 279 "" 0 1 0 0 
+0 0 1 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 280 "Courier" 0 1 255 0 0 1 0 
+1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 281 "" 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 
+1 }{CSTYLE "" -1 282 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" 
+-1 283 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 284 "" 0 1 0 
+0 0 0 0 1 1 0 0 0 0 0 0 1 }{CSTYLE "" -1 285 "" 0 1 0 0 0 0 0 1 0 0 0 
+0 0 0 0 1 }{CSTYLE "" -1 286 "" 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 287 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+288 "" 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 289 "" 0 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 290 "Courier" 0 1 255 0 0 1 0 
+1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 291 "Lucida Console" 0 1 0 0 0 0 0 1 
+0 0 0 0 0 0 0 1 }{CSTYLE "" -1 292 "Courier" 0 1 255 0 0 1 0 1 0 0 0 
+0 0 0 0 1 }{CSTYLE "" -1 293 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 
+0 1 }{CSTYLE "" -1 294 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 295 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+296 "" 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 297 "" 0 1 0 0 
+0 0 0 1 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 299 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 300 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 301 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+302 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 349 "" 1 14 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 352 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 357 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 361 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 362 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+363 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 364 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 365 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 366 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 368 "" 1 14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+369 "" 1 14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 370 "" 1 14 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 371 "" 0 1 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 }{CSTYLE "" -1 372 "" 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 373 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+374 "" 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 375 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 376 "" 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 377 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 378 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+379 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 380 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 381 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 382 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 383 "" 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+384 "" 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 385 "" 1 14 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 386 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 387 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 388 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+389 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 390 "" 
+0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 391 "" 0 1 0 0 0 0 0 1 
+1 0 0 0 0 0 0 0 }{CSTYLE "" -1 392 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+}{CSTYLE "" -1 393 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+394 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 397 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 398 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 399 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 400 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+401 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 402 "" 1 14 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 403 "" 0 1 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 404 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 416 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 417 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+418 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 419 "" 0 1 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 }{CSTYLE "" -1 420 "" 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 421 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 422 "Courier" 0 1 255 0 0 1 0 1 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 423 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+425 "" 1 14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 426 "" 0 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 430 "" 0 1 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Heading 2
+" -1 4 1 {CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 
+1 0 0 8 2 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "
+Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 
+0 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 
+1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Out
+put" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 
+1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 256 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 
+2 0 1 }{PSTYLE "Normal" -1 257 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 1 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" 
+-1 258 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 
+1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Heading 1" -1 259 1 {CSTYLE "" -1 
+-1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }3 1 0 0 8 4 1 0 1 0 2 2 
+0 1 }{PSTYLE "Heading 2" -1 260 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 2 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" 
+-1 261 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 262 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 
+}{PSTYLE "Normal" -1 266 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 271 
+1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 
+0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 272 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Normal" -1 273 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 
+2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 274 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 
+0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 277 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Normal" -1 278 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 
+2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {PARA 259 "" 0 "" {TEXT -1 47 "Introdu\347\343o ao Pacote de \+
+\301lgebra Linear no Maple" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 
+"" 0 "" {TEXT -1 71 "Nesta se\347\343o introduziremos algumas das prin
+cipais fun\347\365es do pacote de " }{TEXT 256 14 "\341lgebra linear" 
+}{TEXT 269 1 " " }{TEXT 270 6 "linalg" }{TEXT -1 172 " para as aplica
+\347\365es mais b\341sicas em GAAL: opera\347\365es com matrizes, reso
+lu\347\343o de sistemas lineares, c\341lculo da inversa de uma matriz \+
+e c\341lculo do determinante de uma Matriz. " }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 161 "Sempre que iniciamos um trabal
+ho em Maple, \351 de fundamental import\342ncia acionar o pacote de fu
+n\347\365es e opera\347\365es espec\355ficas para o problema em quest
+\343o. O comando" }{TEXT 291 1 " " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 256 "" 0 "" {TEXT 290 14 "with(package):" }{TEXT -1 1 " " }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 38 "aciona o \+
+pacote de comandos e fun\347\365es " }{TEXT 293 7 "package" }{TEXT -1 
+93 " do Maple. Em particular, para trabalharmos com GAAL, utilizamos o
+ pacote de \301lgebra Linear: " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 256 "" 0 "" {TEXT 292 13 "with(linalg):" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{SECT 1 {PARA 4 "" 0 "" {TEXT -1 25 "1. Opera\347\365e
+s com matrizes" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 271 "
+" 0 "" {TEXT 385 2 "a)" }{TEXT 386 1 " " }{TEXT 387 61 "Soma de matriz
+es e multiplica\347\343o de uma matriz por um escalar" }{TEXT 388 1 " \+
+" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 15 "Com o comando: " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+272 "" 0 "" {TEXT 361 17 "matadd(A,B,a,b); " }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 31 "executamos a combina\347\343o l
+inear " }{TEXT 366 5 "aA+bB" }{TEXT -1 4 " de " }{TEXT 362 1 "A" }
+{TEXT -1 3 " e " }{TEXT 363 1 "B" }{TEXT -1 7 ", onde " }{TEXT 364 1 "
+a" }{TEXT -1 3 " e " }{TEXT 365 1 "b" }{TEXT -1 21 " s\343o escalares \+
+reais." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 20 
+"Dessa forma podemos:" }}{PARA 0 "" 0 "" {TEXT 368 2 "1)" }{TEXT -1 
+22 " somar duas matrizes; " }}{PARA 0 "" 0 "" {TEXT 369 2 "2)" }{TEXT 
+-1 40 " multiplicar uma matriz por uma escalar;" }}{PARA 0 "" 0 "" 
+{TEXT 370 3 "3) " }{TEXT -1 50 "fazer qualquer combina\347\343o linear
+ de duas matrizes." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }{TEXT 371 0 "" }{TEXT 372 10 "Exemplo 1:" }}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "with(li
+nalg):\nA:=matrix([ [1,0],[1,1] ]);" }}{PARA 7 "" 1 "" {TEXT -1 80 "Wa
+rning, the protected names norm and trace have been redefined and unpr
+otected\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"AG-%'matrixG6#7$7$\"
+\"\"\"\"!7$F*F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "B:=matri
+x([ [1,2],[3,4] ]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"BG-%'matrix
+G6#7$7$\"\"\"\"\"#7$\"\"$\"\"%" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 68 "Se queremos apenas somar as duas matrizes
+, basta omitir os escalares" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "S:=matadd(A,B);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%\"SG-%'matrixG6#7$7$\"\"#F*7$\"\"%\"\"&" }}}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 373 2 "S " }{TEXT -1 
+10 "\351 a matriz" }{TEXT 375 4 " A+B" }{TEXT -1 1 "." }}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 374 0 "" }
+{TEXT 376 10 "Exemplo 2:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "
+" 0 "" {TEXT -1 36 "Queremos agora multiplicar a matriz " }{TEXT 377 
+1 "A" }{TEXT -1 14 " pelo escalar " }{TEXT 378 1 "-" }{TEXT -1 2 "3:" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 27 "A:=matrix([ [1,0],[1,1] ]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%\"AG-%'matrixG6#7$7$\"\"\"\"\"!7$F*F*" }}}{PARA 0 "" 0 "" {TEXT -1 0 
+"" }}{PARA 0 "" 0 "" {TEXT -1 50 "Para tanto \351 necess\341rio que um
+ dos escalares seja " }{TEXT 379 6 "zero, " }{TEXT -1 94 "assim a outr
+a matriz de entrada (pode ser qualquer matriz) n\343o interfere no c
+\341lculo desejado. " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 20 "M:=matadd(A,A,-3,0);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"MG-%'matrixG6#7$7$!\"$\"\"!7$F*F*" }}}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 9 "A matriz " }{TEXT 380 
+1 "M" }{TEXT -1 12 " \351 a matriz " }{TEXT 381 1 "A" }{TEXT -1 27 " m
+ultiplicada pelo escalar " }{TEXT 382 1 "-" }{TEXT -1 1 "3" }{TEXT 
+430 1 "." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }{TEXT 383 0 "" }{TEXT 384 10 "Exemplo 3:" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 144 "Para fazer a combina\347
+\343o linear de duas matrizes, \351 s\363 usar todos os argumentos do \+
+comando. Por exemplo, para obter  a combina\347\343o linear 5A - 8B:" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 27 "A:=matrix([ [0,0],[1,1] ]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%\"AG-%'matrixG6#7$7$\"\"!F*7$\"\"\"F," }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "B:=matrix([ [1,1],[0,0] ]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"BG-%'matrixG6#7$7$\"\"\"F*7$\"\"!F," }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "C:=matadd(A,B,5,-8);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"CG-%'matrixG6#7$7$!\")F*7$\"\"&F," }}}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 
+{PARA 273 "" 0 "" {TEXT 402 2 "b)" }{TEXT 403 1 " " }{TEXT 404 19 "Pro
+duto de matrizes" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 11 "O comando: " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 274 
+"" 0 "" {TEXT 389 19 "multiply(A,B,...); " }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 0 "" 0 "" {TEXT -1 265 "executa o produto das matrizes li
+stadas, na ordem em que aparecem, desde que para isso, as matrizes esc
+olhidas obede\347am \340s regras de multiplica\347\343o de matrizes (o
+ n\372mero de colunas da primeira matriz a ser multiplicada deve ser i
+gual ao n\372mero de linhas da segunda)." }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 390 0 "" }{TEXT 391 10 "Ex
+emplo 4:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 41 "with(linalg):\nA:=matrix([ [1,0],[1,1] ]);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"AG-%'matrixG6#7$7$\"\"\"\"\"!7$F*F*" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "B:=matrix([ [1,2],[3,4] ]);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"BG-%'matrixG6#7$7$\"\"\"\"\"#7
+$\"\"$\"\"%" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 16 "Multiplicaremos " }{TEXT 392 1 "A" }{TEXT -1 5 " por " }{TEXT 
+393 1 "B" }{TEXT -1 21 ", obtendo uma matriz " }{TEXT 394 2 "AB" }
+{TEXT -1 1 "." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "AB:=multiply(A,B);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%#ABG-%'matrixG6#7$7$\"\"\"\"\"#7$\"\"%\"\"'" }}}{PARA 0 "" 0 "
+" {TEXT -1 62 "Lembre-se que o produto de matrizes em geral n\343o \+
+\351 comutativo:" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "BA:=mult
+iply(B,A);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#BAG-%'matrixG6#7$7$\"
+\"$\"\"#7$\"\"(\"\"%" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 
+"" {TEXT -1 32 "Agora multiplicaremos o produto " }{TEXT 397 2 "AB" }
+{TEXT -1 16 " por uma matriz " }{TEXT 398 1 "C" }{TEXT -1 18 ", obtend
+o a matriz" }{TEXT 400 4 " ABC" }{TEXT -1 1 ":" }}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 28 "C:=matrix([ [0,2],[2,-1] ]);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%\"CG-%'matrixG6#7$7$\"\"!\"\"#7$F+!\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "ABC:=multiply(AB,C);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%$ABCG-%'matrixG6#7$7$\"\"%\"\"!7$\"#7\"\"#" }}
+}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 48 "Da mesma
+ maneira, \351 poss\355vel calcular o produto " }{TEXT 399 3 "ABC" }
+{TEXT -1 48 " diretamente, sem antes ter calculado o produto " }{TEXT 
+401 3 "AB:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 "ABC:=multiply(A,B,C);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%$ABCG-%'matrixG6#7$7$\"\"%\"\"!7$\"#7\"\"#" }}}{PARA 0 "" 0 "
+" {TEXT -1 0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 262 "
+" 0 "" {TEXT 349 2 "c)" }{TEXT 352 1 " " }{TEXT 357 26 "Transposi\347
+\343o de uma matriz" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 9 "O comando" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 266 "
+" 0 "" {TEXT 294 14 "transpose(A); " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }
+}{PARA 0 "" 0 "" {TEXT -1 31 "calcula a matriz transposta de " }{TEXT 
+295 1 "A" }{TEXT -1 1 "." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }{TEXT 296 0 "" }{TEXT 297 10 "Exemplo 5:" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+41 "A:=matrix([ [1,2,4],[3,1,5],[-4,-2,1] ]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"AG-%'matrixG6#7%7%\"\"\"\"\"#\"\"%7%\"\"$F*\"\"&7%!
+\"%!\"#F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "At:=transpose(
+A);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#AtG-%'matrixG6#7%7%\"\"\"\"
+\"$!\"%7%\"\"#F*!\"#7%\"\"%\"\"&F*" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }
+}{PARA 0 "" 0 "" {TEXT -1 13 "As linhas de " }{TEXT 299 1 "A" }{TEXT 
+-1 19 " s\343o as colunas de " }{TEXT 300 2 "At" }{TEXT -1 7 ", pois \+
+" }{TEXT 301 2 "At" }{TEXT -1 26 " \351 a matriz transposta de " }
+{TEXT 302 1 "A" }{TEXT -1 15 ", e vice-versa." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 277 "" 
+0 "" {TEXT 425 2 "d)" }{TEXT -1 1 " " }{TEXT 426 23 "Pot\352ncias de u
+ma matriz" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 
+11 "O comando: " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 278 "" 0 "" 
+{TEXT 416 12 "evalm(A^n); " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 
+"" 0 "" {TEXT -1 10 "calcula a " }{TEXT 417 7 "n-\351sima" }{TEXT -1 
+24 " pot\352ncia de uma matriz " }{TEXT 418 2 "A." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 419 0 "" }{TEXT 
+420 10 "Exemplo 6:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 28 "A:=matrix([ [1,2],[-2,0] ]);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"AG-%'matrixG6#7$7$\"\"\"\"\"#7$!\"#\"\"!" }}}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 14 "Para calc
+ular " }{TEXT 421 5 "A^37," }{TEXT -1 31 " ao inv\351s de usarmos o co
+mando " }{TEXT 422 22 "multiply(A,A,A,...,A) " }{TEXT -1 32 "e escreve
+rmos 37 vezes a matriz " }{TEXT 423 1 "A" }{TEXT -1 24 ", fazemos simp
+lesmente: " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "W:=evalm(A^37);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"WG-%'matrixG6#7$7$!,\"RVN+D!-m`!3
+aT\"7$\"-m`!3aT\"\",#HfowX" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}}{SECT 1 {PARA 4 "" 0 "" {TEXT -1 33 "2. Res
+olu\347\343o de sistemas lineares" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 11 "O comando: " }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 256 "" 0 "" {TEXT 258 66 "solve(\{equa\347\343o 1, equa
+\347\343o 2, ... , equa\347\343o n\},\{x1, x2, ... , xm\});" }}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 21 "resolve o siste
+ma de " }{TEXT 273 1 "n" }{TEXT -1 12 " equa\347\365es e " }{TEXT 274 
+1 "m" }{TEXT -1 11 " vari\341veis " }{TEXT 257 17 "x1, x2, ... , xm." 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 0 "" 0 "" {TEXT 275 
+10 "Exemplo 1:" }{TEXT 276 29 "   Sistema com solu\347\343o \372nica.
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 14 "Dado \+
+o sistema" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 256 "" 0 "" {OLE 1 
+4108 1 "[xm]Br=WfoRrB:::wk;nyyI;G:;:j::>:B>N:F:nyyyyy]::yyyyyy::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::fyyyyyq
+:nY^:f:nYnyyyYyA::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::_lqvGcMJ<j\\nGcMsFI>:::::::JEf:yyyxIN:<J;tV;
+J:>R<:T><::;HnkH;aV[?X:A:;V;<Z:j:vCSmlJ::::::::::OJ;@jyyyyyI:;Z:::::::
+^<>:F:AlqfG[maNFO=;::::::::_J;@j:j;>:yayA:<::::::=J:nF>:NZ:vCS=[LsfFaM
+R>@>Z::::::::kJ;@jysyC:yayA:<::::::A:Kx:B:nYN::C:EZ:n:v:<J>>:M:OJ:V;^;
+;j@>:W:YJ:><<jBJC>:wAc:e:wAyA:::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::=Z<B:<::::::::::=Jyyy;d:yayQZHQ:>:;`:Z@w<
+fccWflwgmwg`_hZfbkgh[_hcwgh?^mn_jB=BKaDBETV:;r<RK]=bEaKtaMSAA;B::::::j
+ysyA:C:=J:vYxY;<:;:Is>^wCJAI:=j>r:IX:N:e:;j<j>D:<J<J;@j:f:FZ<vyyyy:^:n
+_;>=E:]c:=B:<j<j?D:<j<J@DZC>fKN<n^@v;ojyyiyAZ:>\\:B:;xyyQNyyyyYJ@[:>oB
+j?<:G;Sj`@Pt\\Pd`QrP`:b:e:qi:tI<:sg:<Z:^Z<B>cTTUUSaEBWTSiEB_tUUURW]w_:
+f_;J>B:_c<PJJ=k:B:;C:K:_;@j:JW>;N@>?=:aLBB:qA>Z:JBA:DJ:DJ:<kc`a\\wgfc:
+C:Uk:^:>X;J>JSdJ^XJJEj:<J:<jq=J>JS>jB>n<F:nw:>;N@kx:;g:=:YAN@kT;;g:=:U
+Q>JS>`<>n<F:^w:>;N@;B<Kd==:uK>JSJ:ej:B:UC:K:_;ke;=:QK>JSJJIj:<:U;N@PJ:
+`j:>:u;N@R;=:Q;N@DJr]j:jX:_;Kb;=:QkDjw;<:[><J<JdRS::pAf_;>:CB:>X=Z:JSB
+<Kx==J:<jS<J>JSJnij:<:a;N@>yAF:^@K:_[?>lDF:B:<:d:[e;=:a;N@DJ^dj:jR>;N@
+>n=F:;Z:f<VYJ:<:[n:>:Cb::::pAf?=J<Jr?:K:_c<\\ZFF:<Jw>[:JSJR`j:jv>;N@R;
+=:kM>JSR;kv;=:m=N@>q=F:>IJSb:Xj:JwB:N@>r>F:>IOZ:n>N;yqyyy:J:><<jw?<I:;
+JXK:<j:NZ\\VdsWhngfgK<<:UK:^:>X=j;B:;:::::::::::::sZ:N:sFsK>;:KxYMLXeq
+^B:;j;@j:Hj:dj:Dj=I_<vjtr:?R:@j<@Z;VZ;>:=J>E]LVjrc:GvDDk;ea<njwb:KVFb>
+AFXrDDJ>I]LVjsc:GVIbF<j:DJ=EKKDk;]Ah<L]LVJb>DJ>I=dAp=H]:B:?b_q]<vjZ>:;
+::::::::::::::::::::::::::j\\<jrfH=MtFGYMq>>Wlj:gmlJ::::::>^:NZ:vyyuy:
+>Z:>Z::::::jC<J:^n:J:::::::::::::yay=J:B:::::::::::::::::::jysy:>:<:::
+::::::::::::::::vYxI:;Z::::::::Zs?;>:5:" }{TEXT -1 0 "" }}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 17 "usamos o comando " }
+{TEXT 280 5 "solve" }{TEXT -1 39 " para determinar o valor das vari
+\341veis " }{TEXT 277 5 "x, y " }{TEXT -1 1 "e" }{TEXT 279 3 " z " }
+{TEXT 278 0 "" }{TEXT -1 1 ":" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "restart:\nwith(linalg):\nsol
+ve( \{2*x+z=1, x+3*y=2, -x+4*y-3*z=3\}, \{x,y,z\} );\n" }}{PARA 7 "" 
+1 "" {TEXT -1 80 "Warning, the protected names norm and trace have bee
+n redefined and unprotected\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<%/%
+\"xG#\"#5\"#6/%\"yG#\"\"%F(/%\"zG#!\"*F(" }}}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{SECT 1 {PARA 0 "" 0 "" {TEXT 281 10 "Exemplo 2:" }
+{TEXT 282 23 "   Sistema sem solu\347\343o." }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 14 "Dado o sistema" }}{PARA 258 "" 
+0 "" {TEXT -1 0 "" }}{PARA 257 "" 0 "" {OLE 1 4108 1 "[xm]Br=WfoRrB:::
+wk;nyyI;G:;:j::>:B>N:F:nyyyyy]::yyyyyy::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::fyyyyyq:nY^:f:nYnyyyYyA::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::_lqvGcMJ<j\\nGcMsFI>:::::::JEf:yyyxIN:<J;tV;J:>R<:T><::;HnkH;aV[?X:A
+:;T;<Z:j:vCSmlJ::::::::::OJ;@jyyyyyI:;Z:::::::^<>:F:AlqfG[maNFO=;:::::
+:::_J;@j:j;>:yayA:<::::::=J:nF>:NZ:vCS=[LsfFaMR>@>Z::::::::kJ;@jysyC:y
+ayA:<::::::A:kw:B:nYN::C:EZ:n:v:<J>j>J?>:Q:SJ:f;;JAjA>:[Z:F<nYV<^<nYvY
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:=Z<B:<::::::::::=Jyyy;d:yayQZHQ:>:;`:Z@w<fccWflwgmwg`_hZfbkgh[_hcwgh?
+^mn_jB=BKaDBETV:;r<RK]=bEaKtaMSAA;B::::::jysyA:CJ:F:;jysy?B:>:v]JB:SY<
+ni=j:F;HjYA:?jDJ:f:F[<Z:^:NZ;F:E:=b:yyyyI:C:WS:kj<jRDj:<Z:f:V[<Z:f:^[<
+R<;g=_:Gc;YJGvyyyyyAZ:>\\:B:;xyyQNyyyyYjt:KG<V[:JMJ@fc[_hb_ds?h_C:DJB>
+Z:Vy<by>Z:JBA:DJ:DJ:<kc`qpDpql`<^:f_;J>B:_c<Kt;;g:=B:;B:YI:K:_K:]JJG:n
+w:>;N@kx:;g:=:YAN@kT;;g:=:UQ>JS>`<>n<F:^w:>;N@;B<`j:>:uK>>:_;Pj:jO>;;J
+SR;Ky<=B:fAJSJ:`j:jO:_;Kb;=:UC:K:_[<>wEF:fAJSJ:`j:jO:_;Kb;=:UkDjw;<:[>
+<J<DZJ^dcSSaEBWTSiEB_tUUURW]w_:f_;F:C:[Y:>;N@\\J:ej:B:aC:K:_;[e;=:a;N@
+PJvpj:Z:B:b<>n=FZ:Z::dZ<>bGF:F@KB:N@>n=F:;Z:f<VYJ:<:[n:>:C:::Zw;UK:^Z:
+JrAj:>;N`DB<kv;=Z:FIK:_;kw:=:kM>JSR;kf<=:oM><:_;[w;=Z:FIJSJZMj:Jv:_[<>
+mDF:NIJSJRYj:jv:_;;H;=:kmDjw;;B:^q<B:<J<D:::Zw;Uk:B:>X;J>JSR;;o:>Z:NAK
+:_;Kk:jcN;<JMJ?vYyyy=:;JBB:qQBvZ:J:^QB:=J;Dlc`qsLqlp@CB:f?;J<Jrk;B:;::
+:::sZ:N:sFsC>;:KxYMLXeq^B:;j;@j:Hj:dj:Dj=I_<vjtr:?R:@j<@Z;VZ;>:=J>E]LV
+jrc:Gf>?c>AVXDJ=i\\LVjtc:GVIDJ>A=:\\AD;ZeZt[wZlB:=b>AFXrDDJ>I]LVjs[w:<
+Z:NZPXI>::::::::::::::::::::::::::::::::::::::fb:FHemj^HMmqnG;KaFFJufF
+>::::::;C:?B:yyyxI:;B:;B::::::N\\:>Z:>n:B:::::::::::::yay=J:B:::::::::
+::::::::::jysy:>:<:::::::::::::::::::vYxI:;Z::::::::::5:" }{TEXT -1 0 
+"" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 25 "Ao e
+xecutarmos o comando " }{TEXT 283 5 "solve" }{TEXT -1 1 " " }}{PARA 0 
+"" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "rest
+art:\nwith(linalg):\nsolve( \{2*x-y+z=1, 2*x-y+z=2, x+3*y=3\}, \{x,y,z
+\} );" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning, the protected names nor
+m and trace have been redefined and unprotected\n" }}}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 0 
+"" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 121 "n\343o obteremos
+ resultado algum. Isso ocorrer\341 sempre que o sistema em quest\343o \+
+for imposs\355vel, ou seja, n\343o admite solu\347\343o." }}}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 260 "" 0 "" {TEXT 284 10 "Exemplo
+ 3:" }{TEXT 285 34 "  Sistema com infinitas solu\347\365es. " }}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 24 "Dado o sistema \+
+homog\352neo" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 256 "" 0 "" 
+{OLE 1 4104 1 "[xm]Br=WfoRrB:::wk;nyyI;G:;:j::>:B>N:F:nyyyyy]::yyyyyy:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+fyyyyyq:nY^:f:nYnyyyYyA:::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::_lqvGcMJ<j\\nGcMsFI>:::::::JEf:yyyxIV
+:NZHQ:<J:>R<:T><::;HnkH;aV[?X:A:;V;<Z:j:vCSmlJ::::::::::OJ;@jyyyyyY;jy
+sy;Z:::::::^<>:F:AlqfG[maNFO=;::::::::_J;vyyuy:>:<::::::=J:nF>:NZ:vCS=
+[LsfFaMR>`:J:<:::::::>=?R:=:C:yayA:<::::::A:ky:B:nYN::C:EZ:n:v:<J>>:M:
+OJ:V;^;;j@>:W:YJ:><<jBJC>:wAc:e:wAyA::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::=Z<B:<::::::::::=Jyyy;d:yayQZHQ:>:
+;`:Z@w<fccWflwgmwg`_hZfbkgh[_hcwgh?^mn_jB=BKaDBETV:;r<RK]=bEaKtaMSAA;B
+::::::jysyA:C:=J:vYxY;<:;:ug>^wCJYI:=j>r:yX:N:e:;j<j>D:;B:C:?R:f:FZ<vy
+yyy:^:n_;>=E:]c:=B:<j<j?D:<j<J@DZCR>_:Gc;YJGvyyuy;B:[B:<JZyyy?oyyyyArJ
+JN]:QB:n>^;UTRcETcTX[US<Z<><;B:qi:tI<:[V:b:;b:<kc`qpDpql`<^:f_;J>B:_c<
+Kt;;g:=B:;B:YI:K:_K:]JJEj:Jq=J>JS>u=>n<F:vWJS>e?>n<F:fWK:_KRDJJEj:Jp=J
+>JS>ZB>cHF:fAK:_;kd<=:QK>JSJvTj:jP<J>JSJJIj:<:U;N@PJNdj:jX:_;Kb;=:Q;N@
+DJbmj:jX:_;;I<=Z:V?JSJnQj:jPf<VYZ:JB[:^Z<B>cTTPps<LaPpu<Lcxpp@PqRZC:US
+:=J<JrA:KB:N@\\Jbyj:B:[K>JSJfij:<:<Z:ZDJjYj:jS<J>JSR;[w<=Z:>@JSJ>Yj:Z:
+:d:;w:=:cK>JSb:kd==:[;N@>fDF:B:>:d:[v:=:akD>:qA>Z:JBG:;J<:::RZjP>:CB:>
+x;F:KB:N@\\Jvmj:B:oM><:_;KR<=J:FIK:_;[S;=:kE:K:_[?>R=B:FIJSZ>F:>IJSb:;
+v<=:o]:JSJBYj:jv:_;;G;=:kmDjw;;B:^q<B:<J<D:::Z;`:f?=Z:Jr?:K:_[?>N=J:<J
+W>;N@>?=:aL?>Z:n>N;yqyyy:J:><<jw?<I:;JX[:F:?bBaTXaEWEUU^Z:jP>:C:[AAZ:>
+::::[f;qy:=Z:^=<J;^m^al:J:J@<r^^`:HC;B:;j;@j:Hj:dj:Dj=I_<vjtr:?R:@j<@Z
+;VZ;>:=J>I]LVjrc:Gf>?c>AVXDJ=i\\<>klb>AfXDJ=q]<>kjj:BGDk;]Ah<D=`Ap=<=n
+jLZr[Lb:KvF:h<D=dAp=<=;J;TswJ::::Oj=NKIJ??:OJ<jPJ<Jr;>:::::JHJ;<:J:J^y
+q^^qtGC>:A:d::H:f:=R:AJ:F:KvFBXElrfH=MtFGYMq>>Wlj:gmlJ::::::>^:N:yay=J
+:<J:<::::::aB:;JR=Z::?ja:[LsjsB:[;;B:::::::JF>:yay=J:B::::::nYyA<:::::
+:::::::jysy:>:<:::::::::::::::::::vYxI:;Z::::::::::1:" }{TEXT -1 0 "" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "restart:\nwith(linalg):\nsol
+ve( \{3*x-y+2*z=0, 4*x+2*y=0, -x-3*y+2*z=0\}, \{x,y,z\} ); \n" }}
+{PARA 7 "" 1 "" {TEXT -1 80 "Warning, the protected names norm and tra
+ce have been redefined and unprotected\n" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#<%/%\"yG,$*&\"\"#\"\"\"%\"xGF)!\"\"/F*F*/%\"zG,$*(\"\"&F)F(F+F*F
+)F+" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 35 "verificamos que uma das vari\341veis (" }{TEXT 286 3 "x, \+
+" }{TEXT 287 0 "" }{TEXT -1 113 "nesse caso) \351 tomada como par\342m
+etro, da\355 temos infinitas solu\347\365es para esse sistema: para ca
+da valor atribu\355do a " }{TEXT 288 1 "x" }{TEXT 289 0 "" }{TEXT -1 
+46 ", obtemos uma solu\347\343o diferente para o sistema" }}}{PARA 
+260 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{SECT 1 
+{PARA 4 "" 0 "" {TEXT -1 50 "3. C\341lculo do determinante e inversa d
+e uma matriz" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{SECT 1 {PARA 0 "" 0 "
+" {TEXT 259 29 "a) Determinante de uma Matriz" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 9 "O comando" }}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 256 "" 0 "" {TEXT -1 1 " " }{TEXT 262 7 "det(
+A);" }{TEXT -1 1 " " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 33 "calcula o determinante da matriz " }{TEXT 261 2 "A." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 263 8 "Exemplo:
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 73 "restart:\nwith(linalg):\nA:= matrix([ [1,3,-1],[4,0,1],[0,-3,0
+] ]);\ndet(A);" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning, the protected \+
+names norm and trace have been redefined and unprotected\n" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"AG-%'matrixG6#7%7%\"\"\"\"\"$!\"\"7%\"\"
+%\"\"!F*7%F/!\"$F/" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#:" }}}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{SECT 0 {PARA 0 "" 0 "" {TEXT 260 
+24 "b) Inversa de uma Matriz" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+0 "" 0 "" {TEXT -1 117 "Sempre que o determinante de uma matriz for di
+ferente de zero, esta matriz possui uma inversa. Neste caso, o comando
+ " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 256 "" 0 "" {TEXT 264 11 "i
+nverse(A);" }{TEXT 266 1 " " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+0 "" 0 "" {TEXT -1 28 "calcula a matriz inversa de " }{TEXT 265 1 "A" 
+}{TEXT -1 1 "." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT 267 10 "Exemplo 1:" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 
+"" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 92 "restart:\nwith(linalg):
+\nA:= matrix([ [1,-1,0],[2,5,-3],[0,0,4] ]);\ndet(A);\ninvA:=inverse(A
+);\n" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning, the protected names norm
+ and trace have been redefined and unprotected\n" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"AG-%'matrixG6#7%7%\"\"\"!\"\"\"\"!7%\"\"#\"\"&!\"$7
+%F,F,\"\"%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#G" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%%invAG-%'matrixG6#7%7%#\"\"&\"\"(#\"\"\"F,#\"\"$\"#
+G7%#!\"#F,F-F/7%\"\"!F6#F.\"\"%" }}}{PARA 0 "" 0 "" {TEXT -1 1 " " }}
+{PARA 0 "" 0 "" {TEXT 268 10 "Exemplo 2:" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 71 "B:=matrix([ [1,2,4],[3,0,-1],[2,-2,-5] ]);\ndet(B);\n
+invB := inverse(B);\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"BG-%'matr
+ixG6#7%7%\"\"\"\"\"#\"\"%7%\"\"$\"\"!!\"\"7%F+!\"#!\"&" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 8 "" 1 "" {TEXT -1 36 "Error, (in i
+nverse) singular matrix\n" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 
+"" 0 "" {TEXT -1 71 "Recebemos uma mensagem de erro esperada, j\341 qu
+e como o determinante de " }{TEXT 271 1 "B" }{TEXT -1 6 " \351 0, " }
+{TEXT 272 1 "B" }{TEXT -1 20 " n\343o possui inversa." }}}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}}}{MARK "12" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 
+}{PAGENUMBERS 0 1 2 33 1 1 }
